@@ -1,3 +1,5 @@
+require('app-module-path').addPath(require('path').join(__dirname, 'lib'));
+
 var express = require('express');
 var path = require('path');
 var favicon = require('serve-favicon');
