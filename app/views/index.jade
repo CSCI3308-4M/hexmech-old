@@ -2,4 +2,17 @@ extends layout
 
 block content
   h1= title
-  p Welcome to #{title}
+  p Welcome to #{title} version #{version}
+  p= description
+  p The source code of #{title} is located at #[a(href= repository) #{repository}].
+  h2 Contributors
+  ul
+    each val in contributors
+      li= val.name
+  p
+    a(href= loginLink) Log In
+  p
+    a(href= signupLink) Sign Up
+
+
+
