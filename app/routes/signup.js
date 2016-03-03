@@ -5,7 +5,6 @@ var httpError = require('http-error');
 var package = require('package');
 
 
-
 function getData() {
   return {
     title: package.name,
@@ -95,6 +94,9 @@ router.get('/', function (req, res, next) {
 
 // POST signup page
 router.post('/', function (req, res, next) {
+
+  // sanitize the input
+  req.sanitizeBody('displayName').trim();
 
   // validate the input
   validate(req);
