@@ -1,6 +1,6 @@
 BROWSERIFY = ../../node_modules/.bin/browserify
 
-LIBS    = jquery bootstrap jquery-validation path
+include Libs
 SOURCES = $(wildcard *.js)
 BUNDLES = $(addprefix bundles/, $(SOURCES))
 
@@ -13,11 +13,11 @@ all: bundles bundles/libs.js $(BUNDLES)
 bundles:
 	mkdir bundles
 
-bundles/libs.js:
-	$(BROWSERIFY) $(RLIBS) -d -p [minifyify --no-map] > $@
+bundles/libs.js: Libs
+	$(BROWSERIFY) $(RLIBS) -d -p [minifyify --map /javascripts/$@.map  --output $@.map ] > $@
 
-bundles/%.js: %.js
-	$(BROWSERIFY) -t cssify $(XLIBS) $< -d -p [minifyify --no-map] > $@
+bundles/%.js: %.js Libs
+	$(BROWSERIFY) $(XLIBS) $< -d -p [minifyify --map /javascripts/$@.map  --output $@.map ] > $@
 
 clean:
 	rm -rf bundles
