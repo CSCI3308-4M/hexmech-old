@@ -12,8 +12,8 @@ router.get('/', function(req, res, next) {
     description: package.description,
     repository: package.repository.url,
     contributors: package.contributors,
-    signupLink: 'signup',
-    loginLink: 'login'
+    signupURL: 'signup',
+    loginURL: 'login'
   };
 
   res.format({

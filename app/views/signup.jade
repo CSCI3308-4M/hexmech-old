@@ -7,36 +7,66 @@ block postscripts
 block content
   .login.well
     .center
-      h1= title
+      h1=title
       hr
       h2 Sign Up
       hr
-    form(id="loginForm", name="signup", action="signup", method="post")
+    include messages
+    form(id="loginForm", name="signup", action=signupLink, method="post")
       .form-group
         label(for="displayName") Display Name
-        input(type="text", name="displayName", id="displayName",
-          class="form-control", placeholder="Enter display name")
+        input(
+          type="text",
+          name="displayName",
+          id="displayName",
+          class="form-control",
+          placeholder="Enter display name",
+          value=prefill?prefill.displayName:"")
       .form-group
         label(for="username") Username
-        input(type="text", name="username", id="username", class="form-control",
-          placeholder="Enter username")
+        input(
+          type="text",
+          name="username",
+          id="username",
+          class="form-control",
+          placeholder="Enter username"
+          value=prefill?prefill.username:"")
       .form-group
         label(for="email") Email
-        input(type="text", name="email", id="email", class="form-control",
-          placeholder="Enter email" required)
+        input(
+          type="text",
+          name="email",
+          id="email",
+          class="form-control",
+          placeholder="Enter email",
+          value=prefill?prefill.email:"")
       .form-group
         label(for="confirmEmail") Confirm Email
-        input(type="text", name="confirmEmail", id="confirmEmail",
+        input(
+          type="text",
+          name="confirmEmail",
+          id="confirmEmail",
           class="form-control",
-          placeholder="Confirm email")
+          placeholder="Confirm email",
+          value=prefill?prefill.confirmEmail:"")
       .form-group
         label(for="password") Password
-        input(type="password", name="password", id="password", class="form-control",
-          placeholder="Enter password")
+        input(
+          type="password",
+          name="password",
+          id="password",
+          class="form-control",
+          placeholder="Enter password",
+          value=prefill?prefill.password:"")
       .form-group
         label(for="confirmPassword") Confirm Password
-        input(type="password", name="confirmPassword", id="confirmPassword",
-          class="form-control", placeholder="Confirm password")
+        input(
+          type="password",
+          name="confirmPassword",
+          id="confirmPassword",
+          class="form-control",
+          placeholder="Confirm password",
+          value=prefill?prefill.confirmPassword:"")
       .form-group.center
         button.btn.btn-default.wide Register
-    p Already have an account: #[a(href="login") Login]
+    p Already have an account: #[a(href= loginLink) Login]
