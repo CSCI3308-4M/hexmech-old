@@ -69,4 +69,7 @@ block content
           value=prefill?prefill.confirmPassword:"")
       .form-group.center
         button.btn.btn-default.wide Register
+    p.
+      Your password will be hashed with
+      #[a(href="https://www.npmjs.com/package/bcrypt") bcrypt].
     p Already have an account: #[a(href= loginLink) Login]
