@@ -1,8 +1,10 @@
 var express = require('express');
 var router = express.Router();
 var _ = underscore = require('underscore');
+var bcrypt = require('bcrypt');
 var httpError = require('http-error');
 var package = require('package');
+var config = require('config');
 
 
 function getData() {
@@ -74,7 +76,6 @@ function validate(req) {
 }
 
 
-
 // GET signup page
 router.get('/', function (req, res, next) {
 
@@ -115,6 +116,9 @@ router.post('/', function (req, res, next) {
     res.render('signup', data);
     return;
   }
+
+  // hash password
+  req.body.password = bcrypt.hashSync(req.body.password, config.bcryptStrength);
 
   console.log(req.body);
   res.json(req.body);
