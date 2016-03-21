@@ -14,6 +14,7 @@ install:
 lint:
 	$(ESLINT) app.js
 	$(ESLINT) routes/**
+	$(ESLINT) models/**
 
 .PHONY: stylesheets
 stylesheets:
