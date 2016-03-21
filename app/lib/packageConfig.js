@@ -1,3 +1,3 @@
-var fs = require('fs')
-var config = JSON.parse(fs.readFileSync('./package.json'));
+const fs = require('fs');
+const config = JSON.parse(fs.readFileSync('./package.json'));
 module.exports = config;
