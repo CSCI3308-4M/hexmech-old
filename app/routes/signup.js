@@ -1,85 +1,44 @@
-var express = require('express');
-var router = express.Router();
-var _ = require('underscore');
-var bcrypt = require('bcrypt');
-var httpError = require('http-error');
-var package = require('package');
-var config = require('config');
-var User = require('../models/user.js');
+const express = require('express');
+const _ = require('underscore');
+const httpError = require('http-error');
+const packageConfig = require('package');
+const User = require('../models/user.js');
 
 
-// GET signup page
-router.get('/', function (req, res, next) {
-  res.format({
-    'text/html': function(){
-      res.render('signup', getData());
-    },
-    'default': function() {
-      // log the request and respond with 406
-      next(httpError(406));
-    }
-  });
-});
+const router = new express.Router();
 
 
-// POST signup page
-router.post('/', function (req, res, next) {
-
-  // sanitize the input
-  req.sanitizeBody('displayName').trim();
-
-  // validate the input
-  validate(req);
-
-  // check for validation errors
-  var err = req.validationErrors(true);
-  if (err){
-    console.log(err);
-    flashError(err, req, res);
-    return;
-  }
-
-  // register user
-  register(req, res, function (err) {
-    if (err) {
-      console.log(err);
-      next(httpError(500));
-    } else {
-      res.redirect('/');
-    }
-  });
-
-});
-
-
-function flashError(err, req, res) {
-    data = getData();
-    data.prefill = setPrefill(err, req.body);
-    data.flash = {
-        type: 'alert-danger',
-        messages: err
-    };
-    res.render('signup', data);
+// get generic form data.
+function getData() {
+  return {
+    title: packageConfig.name,
+    signupURL: 'signup',
+    loginURL: 'login',
+  };
 }
 
 
-function getData() {
-  return {
-    title: package.name,
-    signupURL: 'signup',
-    loginURL: 'login'
-  }
-};
-
-
-function setPrefill(errors, post) {
-  prefill = {};
-  keys = _.difference(Object.keys(post), Object.keys(errors));
+// get form prefill
+function getPrefill(err, post) {
+  const prefill = {};
+  let keys = _.difference(Object.keys(post), Object.keys(err));
   keys = _.without(keys, 'password', 'confirmPassword');
-  keys.forEach(function (key) {
+  keys.forEach((key) => {
     prefill[key] = post[key];
   });
   return prefill;
+}
+
+
+// display flash message
+function flashError(err, req, res) {
+  const data = getData();
+  data.prefill = getPrefill(err, req.body);
+  data.flash = {
+    type: 'alert-danger',
+    messages: err,
+  };
+  res.render('signup', data);
 }
 
 
@@ -88,92 +47,131 @@ function validate(req) {
   req.checkBody({
     displayName: {
       notEmpty: {
-        errorMessage: 'Display Name is required.'
-      }
+        errorMessage: 'Display Name is required.',
+      },
     },
     username: {
       username: {
-        errorMessage: 'Username cannot contain spaces.'
+        errorMessage: 'Username cannot contain spaces.',
       },
       notEmpty: {
-        errorMessage: 'Username is required.'
-      }
+        errorMessage: 'Username is required.',
+      },
     },
     email: {
       isEmail: {
-        errorMessage: 'Please enter a valid email address.'
+        errorMessage: 'Please enter a valid email address.',
       },
       notEmpty: {
-        errorMessage: 'Email Address is required.'
-      }
+        errorMessage: 'Email Address is required.',
+      },
     },
     confirmEmail: {
       equals: {
         options: [req.body.email],
-        errorMessage: 'Email addresses do not match.'
-      }
+        errorMessage: 'Email addresses do not match.',
+      },
     },
     password: {
       isLength: {
-        options: [{min: 14, max: 160}],
-        errorMessage: 'Password must be between 14 and 160 characters.'
+        options: [{ min: 14, max: 160 }],
+        errorMessage: 'Password must be between 14 and 160 characters.',
       },
       notEmpty: {
-        errorMessage: 'Password is required.'
-      }
+        errorMessage: 'Password is required.',
+      },
     },
     confirmPassword: {
       equals: {
         options: [req.body.password],
-        errorMessage: 'Passwords do not match.'
-      }
+        errorMessage: 'Passwords do not match.',
+      },
+    },
+  });
+}
+
+
+// save user
+function saveUser(user, next) {
+  user.save((err) => {
+    if (err) {
+      console.error(err);
+      next(err);
+    } else {
+      console.log('User ${user.username} successfully registered.');
+      next();
     }
   });
 }
 
 
+// register a new user
 function register(req, res, next) {
-
-  // TODO: add check for existing user
-  User.count({username: req.body.username}, function (err, count) {
-
+  // check for existing username
+  User.count({ username: req.body.username }, (err, count) => {
     // handle case of dumplicate username
     if (count > 0) {
-      flashError([{msg: "Username already exists."}], req, res);
+      flashError([{ msg: 'Username already exists.' }], req, res);
       return;
     }
 
     // set plain text fields
-    var user = new User({
+    const user = new User({
       displayName: req.body.displayName,
       username: req.body.username,
       email: req.body.email,
       admin: false,
-      created: new Date()
+      created: new Date(),
     });
 
     // set password and save
-    user.setPassword(req.body.password, function () {
+    user.setPassword(req.body.password, () => {
       saveUser(user, next);
     });
-
   });
 }
 
 
-function saveUser(user, next) {
-  console.log("saving");
-  user.save(function (err) {
-    if (err) {
-    console.log("saving failed");
-      console.log(err);
-      next(err);
+// GET signup page
+router.get('/', (req, res, next) => {
+  res.format({
+    'text/html'() {
+      res.render('signup', getData());
+    },
+    'default'() {
+      // log the request and respond with 406
+      next(httpError(406));
+    },
+  });
+});
+
+
+// POST signup page
+router.post('/', (req, res, next) => {
+  // sanitize the input
+  req.sanitizeBody('displayName').trim();
+
+  // validate the input
+  validate(req);
+
+  // check for validation errors
+  const err = req.validationErrors(true);
+  if (err) {
+    console.error(err);
+    flashError(err, req, res);
+    return;
+  }
+
+  // register user
+  register(req, res, (err_) => {
+    if (err_) {
+      console.error(err_);
+      next(httpError(500));
     } else {
-      console.log("User " + user.username + " successfully registered.");
-      next()
+      res.redirect('/');
     }
   });
-}
+});
 
 
 module.exports = router;

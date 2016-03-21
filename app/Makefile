@@ -11,8 +11,9 @@ install:
 	npm install
 
 .PHONY: lint
-lint: app.js
+lint:
 	$(ESLINT) app.js
+	$(ESLINT) routes/**
 
 .PHONY: stylesheets
 stylesheets:
