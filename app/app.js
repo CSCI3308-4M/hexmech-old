@@ -1,3 +1,4 @@
+'use strict';
 require('app-module-path').addPath(require('path').join(__dirname, 'lib'));
 
 const express = require('express');

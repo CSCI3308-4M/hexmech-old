@@ -1,3 +1,4 @@
+'use strict';
 const mongoose = require('mongoose');
 const mongodbURI = require('mongodb-uri');
 const config = require('config');

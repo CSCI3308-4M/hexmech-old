@@ -1,3 +1,4 @@
+'use strict';
 const express = require('express');
 const httpError = require('http-error');
 const packageConfig = require('packageConfig');

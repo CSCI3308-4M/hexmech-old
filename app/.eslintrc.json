@@ -3,7 +3,12 @@
     "plugins": [
         "react"
     ],
+    "env": {
+      "browser": true,
+      "node": true
+    },
     "rules": {
-      "no-console": 0
+      "no-console": 0,
+      "strict": 0
     }
 }

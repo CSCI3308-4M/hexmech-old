@@ -1,3 +1,4 @@
+'use strict';
 const express = require('express');
 const _ = require('underscore');
 const httpError = require('http-error');
@@ -98,7 +99,7 @@ function saveUser(user, next) {
       console.error(err);
       next(err);
     } else {
-      console.log('User ${user.username} successfully registered.');
+      console.log(`User "${user.username}" successfully registered.`);
       next();
     }
   });

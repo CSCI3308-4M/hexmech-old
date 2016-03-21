@@ -5,6 +5,8 @@ require('jquery-validation');
 
 // wait until the document is loaded before running any javascript
 $(document).ready(() => {
+  'use strict';
+
   // global form validation options
   $('#loginForm').validate({
     highlight(element) {
