@@ -50,6 +50,8 @@
     "jade": "~1.11.0",
     "jquery": "^2.2.1",
     "jquery-validation": "^1.15.0",
+    "mongodb-uri": "^0.9.7",
+    "mongoose": "^4.4.6",
     "morgan": "~1.6.1",
     "phaser": "^2.4.6",
     "serve-favicon": "~2.3.0",

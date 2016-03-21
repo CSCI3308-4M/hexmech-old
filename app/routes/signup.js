@@ -1,10 +1,66 @@
 var express = require('express');
 var router = express.Router();
-var _ = underscore = require('underscore');
+var _ = require('underscore');
 var bcrypt = require('bcrypt');
 var httpError = require('http-error');
 var package = require('package');
 var config = require('config');
+var User = require('../models/user.js');
+
+
+// GET signup page
+router.get('/', function (req, res, next) {
+  res.format({
+    'text/html': function(){
+      res.render('signup', getData());
+    },
+    'default': function() {
+      // log the request and respond with 406
+      next(httpError(406));
+    }
+  });
+});
+
+
+// POST signup page
+router.post('/', function (req, res, next) {
+
+  // sanitize the input
+  req.sanitizeBody('displayName').trim();
+
+  // validate the input
+  validate(req);
+
+  // check for validation errors
+  var err = req.validationErrors(true);
+  if (err){
+    console.log(err);
+    flashError(err, req, res);
+    return;
+  }
+
+  // register user
+  register(req, res, function (err) {
+    if (err) {
+      console.log(err);
+      next(httpError(500));
+    } else {
+      res.redirect('/');
+    }
+  });
+
+});
+
+
+function flashError(err, req, res) {
+    data = getData();
+    data.prefill = setPrefill(err, req.body);
+    data.flash = {
+        type: 'alert-danger',
+        messages: err
+    };
+    res.render('signup', data);
+}
 
 
 function getData() {
@@ -76,53 +132,48 @@ function validate(req) {
 }
 
 
-// GET signup page
-router.get('/', function (req, res, next) {
+function register(req, res, next) {
 
-  res.format({
-    'text/html': function(){
-      res.render('signup', getData());
-    },
+  // TODO: add check for existing user
+  User.count({username: req.body.username}, function (err, count) {
 
-    'default': function() {
-      // log the request and respond with 406
-      next(httpError(406));
+    // handle case of dumplicate username
+    if (count > 0) {
+      flashError([{msg: "Username already exists."}], req, res);
+      return;
+    }
+
+    // set plain text fields
+    var user = new User({
+      displayName: req.body.displayName,
+      username: req.body.username,
+      email: req.body.email,
+      admin: false,
+      created: new Date()
+    });
+
+    // set password and save
+    user.setPassword(req.body.password, function () {
+      saveUser(user, next);
+    });
+
+  });
+}
+
+
+function saveUser(user, next) {
+  console.log("saving");
+  user.save(function (err) {
+    if (err) {
+    console.log("saving failed");
+      console.log(err);
+      next(err);
+    } else {
+      console.log("User " + user.username + " successfully registered.");
+      next()
     }
   });
-
-});
-
-
-// POST signup page
-router.post('/', function (req, res, next) {
-
-  // sanitize the input
-  req.sanitizeBody('displayName').trim();
-
-  // validate the input
-  validate(req);
-
-  // check for validation errors
-  var errors = req.validationErrors(true);
-  if (errors){
-    console.log(errors);
-    data = getData();
-    data.prefill = setPrefill(errors, req.body)
-    data.flash = {
-        type: 'alert-danger',
-        messages: errors
-    };
-    console.log(data);
-    res.render('signup', data);
-    return;
-  }
-
-  // hash password
-  req.body.password = bcrypt.hashSync(req.body.password, config.bcryptStrength);
-
-  console.log(req.body);
-  res.json(req.body);
-});
+}
 
 
 module.exports = router;

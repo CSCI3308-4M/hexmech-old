@@ -1,3 +1,4 @@
+"use strict";
 require('app-module-path').addPath(require('path').join(__dirname, 'lib'));
 
 var express = require('express');
@@ -12,6 +13,8 @@ var routes = require('./routes/index');
 var users = require('./routes/users');
 
 var app = express();
+
+require('./models/db')
 
 app.use(favicon(path.join(__dirname, 'public', 'images', 'favicon.png')));
 
@@ -37,6 +40,7 @@ app.use(function(req, res, next) {
   err.status = 404;
   next(err);
 });
+
 
 // error handlers
 
