@@ -1,75 +1,73 @@
 // bootstrap needs jQuery to be global
-window.jQuery = $ = require('jquery')
-var bootstrap = require('bootstrap')
-var jqueryValidator = require('jquery-validation')
+const $ = window.jQuery = require('jquery');
+require('bootstrap');
+require('jquery-validation');
 
 // wait until the document is loaded before running any javascript
-$(document).ready(function (){
-
+$(document).ready(() => {
   // global form validation options
   $('#loginForm').validate({
-    highlight: function(element) {
-        $(element).closest('.form-group').addClass('has-error');
+    highlight(element) {
+      $(element).closest('.form-group').addClass('has-error');
     },
-    unhighlight: function(element) {
-        $(element).closest('.form-group').removeClass('has-error');
+    unhighlight(element) {
+      $(element).closest('.form-group').removeClass('has-error');
     },
     errorElement: 'span',
     errorClass: 'help-block',
-    errorPlacement: function(error, element) {
-            error.insertAfter(element);
-    }
+    errorPlacement(error, element) {
+      error.insertAfter(element);
+    },
   });
 
   // custom username validator
-  $.validator.addMethod('username', function (value, element){
-    return this.optional(element) || !/\s/.test(value)
-  }, 'Spaces are not allowed in usernames.')
+  $.validator.addMethod('username',
+    (value, element) => this.optional(element) || !/\s/.test(value),
+    'Spaces are not allowed in usernames.');
 
   // display name validation
-  $('#displayName').rules("add", {
-    required: true
+  $('#displayName').rules('add', {
+    required: true,
   });
 
   // username validation
-  $('#username').rules("add", {
+  $('#username').rules('add', {
     required: true,
-    username: true
+    username: true,
   });
 
   // email validation
-  $('#email').rules("add", {
+  $('#email').rules('add', {
     required: true,
-    email: true
+    email: true,
   });
 
   // email validation
-  $('#email').rules("add", {
+  $('#email').rules('add', {
     required: true,
-    email: true
+    email: true,
   });
 
   // confirmation email validation
-  $('#confirmEmail').rules("add", {
+  $('#confirmEmail').rules('add', {
     equalTo: '#email',
     messages: {
-      equalTo: "Emails do not match.",
-    }
+      equalTo: 'Emails do not match.',
+    },
   });
 
   // password validation
-  $('#password').rules("add", {
+  $('#password').rules('add', {
     required: true,
     minlength: 14,
-    maxlength: 160
+    maxlength: 160,
   });
 
   // confirmation passowrd validation
-  $('#confirmPassword').rules("add", {
+  $('#confirmPassword').rules('add', {
     equalTo: '#password',
     messages: {
-      equalTo: "Passwords do not match.",
-    }
+      equalTo: 'Passwords do not match.',
+    },
   });
-
 });

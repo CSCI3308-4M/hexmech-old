@@ -15,6 +15,8 @@ lint:
 	$(ESLINT) app.js
 	$(ESLINT) routes/**
 	$(ESLINT) models/**
+	$(ESLINT) lib/**
+	$(ESLINT) public/javascripts/*.js
 
 .PHONY: stylesheets
 stylesheets:
