@@ -1,7 +1,7 @@
 const express = require('express');
 const _ = require('underscore');
 const httpError = require('http-error');
-const packageConfig = require('package');
+const packageConfig = require('packageConfig');
 const User = require('../models/user.js');
 
 

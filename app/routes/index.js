@@ -1,6 +1,6 @@
 const express = require('express');
 const httpError = require('http-error');
-const packageConfig = require('package');
+const packageConfig = require('packageConfig');
 const router = new express.Router();
 
 /* GET home page. */
