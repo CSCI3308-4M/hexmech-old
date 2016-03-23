@@ -1,9 +1,12 @@
-var HttpStatus = require('http-status-codes');
+'use strict';
+const HttpStatus = require('http-status-codes');
 
-function httpError(code){
-    err = new Error(HttpStatus.getStatusText(code));
-    err.status = code;
-    return err;
-};
+
+function httpError(code) {
+  const err = new Error(HttpStatus.getStatusText(code));
+  err.status = code;
+  return err;
+}
+
 
 module.exports = httpError;

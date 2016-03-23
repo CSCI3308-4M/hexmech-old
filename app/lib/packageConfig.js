@@ -1,4 +1,4 @@
 'use strict';
 const fs = require('fs');
-const config = JSON.parse(fs.readFileSync('./config.json'));
+const config = JSON.parse(fs.readFileSync('./package.json'));
 module.exports = config;
