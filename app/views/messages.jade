@@ -1,0 +1,6 @@
+if flash
+  div.alert(class= flash.type)
+    ul
+      each message in flash.messages
+        li= message.msg
+    ul
