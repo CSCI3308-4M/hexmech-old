@@ -2,6 +2,10 @@ Who: Mackenzie Colwell, Matthew Kaplan, Max Lookabaugh, Michael Shannon
 Title: HexMech  
 Vision: Crushing metal with every commit.  
 Automated Tests:   
+To run our automated unit tests, download this repository and run the following commands:
+>npm install  
+>npm start  
+
 User Acceptance Tests:  
 
 |Test One:|
@@ -17,7 +21,7 @@ Log in to your account| |
 |Lose the game| |
 
 |Test Two:|
-|--------------|:---------------------:|
+|:--------------|:---------------------:|
 **Task**|**Results**|
 Play a game on every map|why won't this show up|
 Take damage from an enemy|  |
