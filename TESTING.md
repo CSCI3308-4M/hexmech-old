@@ -43,12 +43,10 @@ To run our automated unit tests, download this repository and run the following 
 |  Post consitions:  | Player is now in a game in progress          |
 | Frequency of Use:  | Often                                        |
 
-|                                      |         Flow of Events                   |                         |
-| :----------------------------------- | :--------------------------------------- | :---------------------- |
-| Actor Action                         | System Response                          | Comments                |
-| 1) Click on the New game button      | 1) Ways to initiate a game are displayed | 1)________________      |
-| 2) Click on the Find Opponent button | 2) The site displays a spinner animation until it finds an opponent, then displays the opponent's username                                       | 2)________________      |
-| 3)                                   | 3)                    | 3)________________      |
+| Flow of Events: | Actor Action                         | System Response                       | Comments      |
+| :-------------- | :----------------------------------- | :------------------------------------ |:------------- |
+|                 | 1. Click on new Game button          | Ways to initiate a game are displayed | _______________              |
+|                 | 2. Click on the Find Opponent button | The site displays a spinner animation until it finds an opponent, then displays the opponent's user name | _______________ |
 
 |                      |                                                    |
 | :------------------- | :-------------------------------------------------:|
