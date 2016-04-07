@@ -19,17 +19,16 @@ To run our automated unit tests, download this repository and run the following 
 |  Post consitions:  | Player has an account                   |
 | Frequency of Use:  | Once                                    |
 
-|                      |         Flow of Events          |                         |
-| :------------------- | :------------------------------ | :---------------------- |
-| Actor Action         | System Response                 | Comments                |
-| 1) Click on register | 1) The system displays the form | 1)________________      |
-| 2) Fill in the form  | 2)                              | 2)________________      |
-| 3) Click Log In      | 3) Account is created           | 3)________________      |
+|   Flow of Events:    | Actor Action          | System Response                 | Comments                |
+| :------------------- | :-------------------- | :------------------------------ | :---------------------- |
+|                      |  1. Click on register | The system displays the form | ________________      |
+|                      |  2. Fill in the form  |                              | ________________      |
+|                      |  3. Click Log In      | Account is created           | ________________      |
 
-|                      |                                                    |
-| :------------------- | :-------------------------------------------------:|
-|         Test Pass?:  | Pass / Fail                                        |
-|   Notes and Issues:  | __________________________________________________ |
+|                      |                                                                    |
+| :------------------- | :----------------------------------------------------------------: |
+|         Test Pass?:  | Pass / Fail                                                        |
+|   Notes and Issues:  | __________________________________________________________________ |
 
 |                |                                                      |
 | :------------- | :--------------------------------------------------- |
