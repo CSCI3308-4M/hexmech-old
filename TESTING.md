@@ -15,8 +15,8 @@ To run our automated unit tests, download this repository and run the following 
 |                    |                                         |
 | :----------------- | :-------------------------------------- |
 |            Users:  | Player                                  |
-|   Pre-conditions:  | N/A                                     |
-|  Post consitions:  | Player has an account                   |
+|   Preconditions:   | N/A                                     |
+|  Postconsitions:   | Player has an account                   |
 | Frequency of Use:  | Once                                    |
 
 |   Flow of Events:    | Actor Action          | System Response                 | Comments                |
@@ -39,8 +39,8 @@ To run our automated unit tests, download this repository and run the following 
 |                    |                                              |
 | :----------------- | :------------------------------------------- |
 |            Users:  | Player                                       |
-|   Pre-conditions:  | Player must have an account and be logged in |
-|  Post consitions:  | Player is now in a game in progress          |
+|   Preconditions:   | Player must have an account and be logged in |
+|  Postconsitions:   | Player is now in a game in progress          |
 | Frequency of Use:  | Often                                        |
 
 | Flow of Events: | Actor Action                         | System Response                       | Comments      |
