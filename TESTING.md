@@ -48,10 +48,10 @@ To run our automated unit tests, download this repository and run the following 
 |                 | 1. Click on new Game button          | Ways to initiate a game are displayed | _______________              |
 |                 | 2. Click on the Find Opponent button | The site displays a spinner animation until it finds an opponent, then displays the opponent's user name | _______________ |
 
-|                      |                                                    |
-| :------------------- | :-------------------------------------------------:|
-|         Test Pass?:  | Pass / Fail                                        |
-|   Notes and Issues:  | __________________________________________________ |
+|                      |                                                                                 |
+| :------------------- | :------------------------------------------------------------------------------:|
+|         Test Pass?:  | Pass / Fail                                                                     |
+|   Notes and Issues:  | _______________________________________________________________________________ |
 
 User Acceptance Tests:  
 
