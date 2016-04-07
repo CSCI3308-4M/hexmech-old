@@ -46,13 +46,13 @@ To run our automated unit tests, download this repository and run the following 
 
 | Flow of Events:  | Actor Action                 | System Response               | Comments         |
 |------------------|------------------------------|-------------------------------|------------------| 
-|                  | 1.Log in                     | System displays login         |                  |
-|                  | 2.Click on Quick Start       | Quick Start Guide is on screen|                  |
+|                  | 1.Log in                     | System displays login         | _______________  |
+|                  | 2.Click on Quick Start       | Quick Start Guide is on screen| _______________  |
 
 |                  |                                                        |
-|------------------|--------------------------------------------------------| 
-| Test Pass?       | Pass/Fail                                              |
-|Notes and Issues: |________________________________________________________|                          
+|------------------|-------------------------------------------------------------------| 
+| Test Pass?       | Pass/Fail                                                          |
+|Notes and Issues: |___________________________________________________________________|                          
 
 
 |                |                                                      |
@@ -94,15 +94,15 @@ To run our automated unit tests, download this repository and run the following 
 
 | Flow of Events:  | Actor Action                         | System Response               | Comments         |
 |------------------|--------------------------------------|-------------------------------|------------------| 
-|                  | 1.Click on your mech                 | Mech is highlighted           |                  |
-|                  | 2.Click jump and tile to jump to     | Mech is now on selected tile  |                  |
-|                  | 3.Click on Walk and tile to walk to  | Mech is now on tile selected  |                  |
-|                  | 4.Click on run and tile to run to    | Mech is now on selected tile  |                  |
+|                  | 1.Click on your mech                 | Mech is highlighted           | ______________           |
+|                  | 2.Click jump and tile to jump to     | Mech is now on selected tile  | ______________                 |
+|                  | 3.Click on Walk and tile to walk to  | Mech is now on tile selected  | ______________                 |
+|                  | 4.Click on run and tile to run to    | Mech is now on selected tile  | ______________                 |
 
 |                  |                                                        |
 |------------------|--------------------------------------------------------| 
 | Test Pass?       | Pass/Fail                                              |
-|Notes and Issues: |________________________________________________________|                          
+|Notes and Issues: |___________________________________________________________________________|                          
 
 
 User Acceptance Tests:  
