@@ -2,11 +2,11 @@ Who: Mackenzie Colwell, Matthew Kaplan, Max Lookabaugh, Michael Shannon
 Title: HexMech  
 Vision: Crushing metal with every commit.  
 Automated Tests:   
-To run our automated unit tests, download this repository and run the following commands:
+To run our automated unit tests, download this repository and run the following commands (from the `app` directory):
 >npm install  
 >npm start
 
-An example of a failing run of the tests is:
+An example of a run of the tests is:
 
 ```
   HTTP Error
@@ -18,40 +18,27 @@ An example of a failing run of the tests is:
   User Model
     .save
       ✓ should allow saving without error
+      ✓ should set the created date on creation
+      ✓ should not set the created date on update
+      ✓ should set the updated date on creation
+      ✓ should set the updated date on update
     .setPassword
-      ✓ should set the password using bcrypt (896ms)
+      ✓ should set the password using bcrypt (884ms)
     .setPasswordSync
-      ✓ should set the password using bcrypt (906ms)
+      ✓ should set the password using bcrypt (887ms)
     .findOne
       ✓ should find user via username
       ✓ should find user via email
       ✓ should find user via display name
     .checkPassword
-      ✓ should call callback with true if password is correct
-      ✓ should call callback with false if password is incorrect
+      ✓ should call callback with true if password is correct (893ms)
+      ✓ should call callback with false if password is incorrect (879ms)
     .checkPasswordSync
-      1) should return true if password is correct
-      2) should return false if password is incorrect
+      ✓ should return true if password is correct (881ms)
+      ✓ should return false if password is incorrect (875ms)
 
 
-  12 passing (4s)
-  2 failing
-
-  1) User Model .checkPasswordSync should return true if password is correct:
-     Uncaught TypeError: expect(...).to.be.true is not a function
-      at Query.<anonymous> (test/models/user.js:211:31)
-      at node_modules/kareem/index.js:177:19
-      at node_modules/kareem/index.js:109:16
-
-  2) User Model .checkPasswordSync should return false if password is incorrect:
-     Uncaught AssertionError: expected false to be true
-      at Query.<anonymous> (test/models/user.js:224:26)
-      at node_modules/kareem/index.js:177:19
-      at node_modules/kareem/index.js:109:16
-
-
-
-npm ERR! Test failed.  See above for more details.
+  18 passing (6s)
 ```
 
 |                |                                         |
