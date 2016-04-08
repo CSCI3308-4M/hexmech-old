@@ -70,7 +70,8 @@ userSchema.methods.checkPasswordSync = function checkPasswordSync(password) {
 
 
 // ran before saving user
-userSchema.pre('save', (next) => {
+// NOTE: Cannot use arrow function here as bind is called.
+userSchema.pre('save', function preSave(next) {
   const currentDate = new Date();
   this.updated = currentDate;
   if (!this.created) {

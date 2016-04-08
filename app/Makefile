@@ -17,6 +17,11 @@ lint:
 	$(ESLINT) models/**
 	$(ESLINT) lib/**
 	$(ESLINT) public/javascripts/*.js
+	$(ESLINT) test/**
+
+.PHONY: test
+test:
+	npm test
 
 .PHONY: stylesheets
 stylesheets:
