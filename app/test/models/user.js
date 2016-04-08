@@ -1,3 +1,4 @@
+/* eslint-env node, mocha */
 'use strict';
 
 require('app-module-path').addPath(require('path').join(
@@ -5,24 +6,21 @@ require('app-module-path').addPath(require('path').join(
 const expect = require('chai').expect;
 const mongoose = require('mongoose');
 const mockgoose = require('mockgoose');
-const proxyquire = require
 const User = require('../../models/user');
-const config = require('config')
+const config = require('config');
 
-describe('User Model', function () {
-
-  before(function (done) {
-    mockgoose(mongoose).then(function() {
-      mongoose.connect(config.mongoURI, function (err) {
+describe('User Model', () => {
+  before((done) => {
+    mockgoose(mongoose).then(() => {
+      mongoose.connect(config.mongoURI, (err) => {
         done(err);
       });
     });
   });
 
 
-  beforeEach(function (done) {
-    mockgoose.reset()
-
+  beforeEach((done) => {
+    mockgoose.reset();
     User.create({
       displayName: 'Example User',
       username: 'example',
@@ -30,10 +28,9 @@ describe('User Model', function () {
       password: '$2a$14$OagnzJvy547.L2AOgzQciuIpTCWACs7XK9f3lbOYRBAiYEFUFLR82',
       email: 'example@example.com',
       admin: false,
-      created: new Date(2000,1,1,0,0,0),
-      updated: new Date(2001,1,1,0,0,0)
-    }, function () {
-
+      created: new Date(2000, 1, 1, 0, 0, 0),
+      updated: new Date(2001, 1, 1, 0, 0, 0),
+    }, () => {
       User.create({
         displayName: 'Carbon Fizz',
         username: 'carbonfizz',
@@ -41,10 +38,9 @@ describe('User Model', function () {
         password: '$2a$14$H8yqesNBKn3Ax/7DNoRoc.HEsAz9ArtU9e.eiruARebAHMRGqMiEK',
         email: 'carbonfizz@example.com',
         admin: true,
-        created: new Date(2010,1,1,0,0,0),
-        updated: new Date(2011,1,1,0,0,0)
-      }, function () {
-    
+        created: new Date(2010, 1, 1, 0, 0, 0),
+        updated: new Date(2011, 1, 1, 0, 0, 0),
+      }, () => {
         User.create({
           displayName: 'Ugliest Jam',
           username: 'ugliestjam',
@@ -53,8 +49,8 @@ describe('User Model', function () {
           email: 'ugliestjam@example.com',
           admin: false,
           created: Date.now(),
-          updated: Date.now()
-        }, function () {
+          updated: Date.now(),
+        }, () => {
           done();
         });
       });
@@ -62,15 +58,14 @@ describe('User Model', function () {
   });
 
 
-  afterEach(function (done) {
+  afterEach((done) => {
     mockgoose.reset();
     done();
   });
 
 
-  describe('.save', function () {
-
-    it('should allow saving without error', function (done) {
+  describe('.save', () => {
+    it('should allow saving without error', (done) => {
       const user = new User({
         displayName: 'Jumping Unicorn',
         username: 'jumpingunicorn',
@@ -78,58 +73,46 @@ describe('User Model', function () {
         admin: false,
         created: Date.now(),
       });
-      user.save(function (err) {
+      user.save((err) => {
         expect(err).to.be.an('null');
         done();
       });
     });
 
-    it('should set the created date on creation', function (done) {
-      User.findOne({username: 'ugliestjam'}, function (err, user) {
-        if (err){
-          done(err);
-          return;
-        }
+    it('should set the created date on creation', (done) => {
+      User.findOne({ username: 'ugliestjam' }, (err, user) => {
         expect(user).to.have.property('created');
         expect(user.created).to.be.instanceof(Date);
         expect(user.created.getTime()).to.be.closeTo(Date.now(), 100);
-        done();
+        done(err);
       });
     });
 
-    it('should not set the created date on update', function (done) {
-      User.findOne({username: 'carbonfizz'}, function (err, user) {
-        if (err){
-          done(err);
-          return;
-        }
-        user.email = 'carbonfizz@fizz.net';
-        user.save(function (err) {
+    it('should not set the created date on update', (done) => {
+      User.findOne({ username: 'carbonfizz' }, (error, user) => {
+        user.email = 'carbonfizz@fizz.net'; // eslint-disable-line no-param-reassign
+        user.save((err) => {
           expect(user).to.have.property('created');
           expect(user.created).to.be.instanceof(Date);
           expect(user.created.getTime()).to.be.not.closeTo(Date.now(), 100);
-          done();
+          done(err);
         });
       });
     });
 
-    it('should set the updated date on creation', function (done) {
-      User.findOne({username: 'ugliestjam'}, function (err, user) {
-        if (err){
-          done(err);
-          return;
-        }
+    it('should set the updated date on creation', (done) => {
+      User.findOne({ username: 'ugliestjam' }, (err, user) => {
         expect(user).to.have.property('updated');
         expect(user.updated).to.be.instanceof(Date);
         expect(user.updated.getTime()).to.be.closeTo(Date.now(), 100);
-        done();
+        done(err);
       });
     });
 
-    it('should set the updated date on update', function (done) {
-      User.findOne({username: 'carbonfizz'}, function (err, user) {
-        user.email = 'carbonfizz@fizz.net';
-        user.save(function (err) {
+    it('should set the updated date on update', (done) => {
+      User.findOne({ username: 'carbonfizz' }, (error, user) => {
+        user.email = 'carbonfizz@fizz.net'; // eslint-disable-line no-param-reassign
+        user.save((err) => {
           expect(user).to.have.property('updated');
           expect(user.updated).to.be.instanceof(Date);
           expect(user.updated.getTime()).to.be.closeTo(Date.now(), 100);
@@ -137,41 +120,35 @@ describe('User Model', function () {
         });
       });
     });
-
   });
 
 
-  describe('.setPassword', function () {
-
-    it('should set the password using bcrypt', function (done) {
+  describe('.setPassword', () => {
+    it('should set the password using bcrypt', (done) => {
       const user = new User();
-      user.setPassword('password', function (err) {
+      user.setPassword('password', (err) => {
         expect(user).to.have.property('password');
         expect(user.password).to.be.a('string');
         done(err);
-      })
+      });
     });
-
   });
 
 
-  describe('.setPasswordSync', function () {
-
-    it('should set the password using bcrypt', function (done) {
+  describe('.setPasswordSync', () => {
+    it('should set the password using bcrypt', (done) => {
       const user = new User();
-      user.setPasswordSync('password')
+      user.setPasswordSync('password');
       expect(user).to.have.property('password');
       expect(user.password).to.be.a('string');
       done();
     });
-
   });
 
 
-  describe('.findOne', function () {
-
-    it('should find user via username', function (done) {
-      User.findOne({username: 'carbonfizz'}, function (err, user) {
+  describe('.findOne', () => {
+    it('should find user via username', (done) => {
+      User.findOne({ username: 'carbonfizz' }, (err, user) => {
         expect(user).to.have.property('displayName');
         expect(user.displayName).to.be.a('string');
         expect(user.displayName).to.equal('Carbon Fizz');
@@ -179,8 +156,8 @@ describe('User Model', function () {
       });
     });
 
-    it('should find user via email', function (done) {
-      User.findOne({email: 'carbonfizz@example.com'}, function (err, user) {
+    it('should find user via email', (done) => {
+      User.findOne({ email: 'carbonfizz@example.com' }, (err, user) => {
         expect(user).to.have.property('displayName');
         expect(user.displayName).to.be.a('string');
         expect(user.displayName).to.equal('Carbon Fizz');
@@ -188,63 +165,57 @@ describe('User Model', function () {
       });
     });
 
-    it('should find user via display name', function (done) {
-      User.findOne({displayName: 'Carbon Fizz'}, function (err, user) {
+    it('should find user via display name', (done) => {
+      User.findOne({ displayName: 'Carbon Fizz' }, (err, user) => {
         expect(user).to.have.property('username');
         expect(user.username).to.be.a('string');
         expect(user.username).to.equal('carbonfizz');
         done(err);
       });
     });
-
   });
 
 
-  describe('.checkPassword', function () {
-
-    it('should call callback with true if password is correct', function (done) {
-      User.findOne({username: 'carbonfizz'}, function (err, user) {
-        user.checkPassword('agilezebra', function (res) {
+  describe('.checkPassword', () => {
+    it('should call callback with true if password is correct', (done) => {
+      User.findOne({ username: 'carbonfizz' }, (err, user) => {
+        user.checkPassword('agilezebra', (res) => {
           expect(res).to.be.a('boolean');
-          expect(res).to.be.true;
+          expect(res).to.be.true; // eslint-disable-line no-unused-expressions
           done(err);
         });
       });
     });
 
-    it('should call callback with false if password is incorrect', function (done) {
-      User.findOne({username: 'carbonfizz'}, function (err, user) {
-        user.checkPassword('agilezebra1', function (res) {
+    it('should call callback with false if password is incorrect', (done) => {
+      User.findOne({ username: 'carbonfizz' }, (err, user) => {
+        user.checkPassword('agilezebra1', (res) => {
           expect(res).to.be.a('boolean');
-          expect(res).to.be.false;
+          expect(res).to.be.false; // eslint-disable-line no-unused-expressions
           done(err);
         });
       });
     });
-
   });
 
 
-  describe('.checkPasswordSync', function () {
-
-    it('should return true if password is correct', function (done) {
-      User.findOne({username: 'carbonfizz'}, function (err, user) {
+  describe('.checkPasswordSync', () => {
+    it('should return true if password is correct', (done) => {
+      User.findOne({ username: 'carbonfizz' }, (err, user) => {
         const res = user.checkPasswordSync('agilezebra');
         expect(res).to.be.a('boolean');
-        expect(res).to.be.true;
+        expect(res).to.be.true; // eslint-disable-line no-unused-expressions
         done(err);
       });
     });
 
-    it('should return false if password is incorrect', function (done) {
-      User.findOne({username: 'carbonfizz'}, function (err, user) {
+    it('should return false if password is incorrect', (done) => {
+      User.findOne({ username: 'carbonfizz' }, (err, user) => {
         const res = user.checkPasswordSync('agilezebra1');
         expect(res).to.be.a('boolean');
-        expect(res).to.be.false;
+        expect(res).to.be.false; // eslint-disable-line no-unused-expressions
         done(err);
       });
     });
-
   });
-
 });
