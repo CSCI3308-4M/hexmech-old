@@ -4,7 +4,55 @@ Vision: Crushing metal with every commit.
 Automated Tests:   
 To run our automated unit tests, download this repository and run the following commands:
 >npm install  
->npm start  
+>npm start
+
+An example of a failing run of the tests is:
+
+```
+  HTTP Error
+    ✓ returns node error with http status and message
+    ✓ handles 301
+    ✓ handles 404
+    ✓ handles 501
+
+  User Model
+    .save
+      ✓ should allow saving without error
+    .setPassword
+      ✓ should set the password using bcrypt (896ms)
+    .setPasswordSync
+      ✓ should set the password using bcrypt (906ms)
+    .findOne
+      ✓ should find user via username
+      ✓ should find user via email
+      ✓ should find user via display name
+    .checkPassword
+      ✓ should call callback with true if password is correct
+      ✓ should call callback with false if password is incorrect
+    .checkPasswordSync
+      1) should return true if password is correct
+      2) should return false if password is incorrect
+
+
+  12 passing (4s)
+  2 failing
+
+  1) User Model .checkPasswordSync should return true if password is correct:
+     Uncaught TypeError: expect(...).to.be.true is not a function
+      at Query.<anonymous> (test/models/user.js:211:31)
+      at node_modules/kareem/index.js:177:19
+      at node_modules/kareem/index.js:109:16
+
+  2) User Model .checkPasswordSync should return false if password is incorrect:
+     Uncaught AssertionError: expected false to be true
+      at Query.<anonymous> (test/models/user.js:224:26)
+      at node_modules/kareem/index.js:177:19
+      at node_modules/kareem/index.js:109:16
+
+
+
+npm ERR! Test failed.  See above for more details.
+```
 
 |                |                                         |
 | :------------- | :-------------------------------------- |
