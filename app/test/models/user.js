@@ -52,8 +52,8 @@ describe('User Model', function () {
           password: '$2a$14$vi5FS86Pskup3QX4b1puguhBWpB4H6IBdnVuEwHzD5mgEopuBYeUy',
           email: 'ugliestjam@example.com',
           admin: false,
-          created: new Date(2016,1,1,0,0,0),
-          updated: new Date(2016,2,1,0,0,0)
+          created: Date.now(),
+          updated: Date.now()
         }, function () {
           done();
         });
@@ -71,7 +71,6 @@ describe('User Model', function () {
   describe('.save', function () {
 
     it('should allow saving without error', function (done) {
-
       const user = new User({
         displayName: 'Jumping Unicorn',
         username: 'jumpingunicorn',
@@ -79,12 +78,64 @@ describe('User Model', function () {
         admin: false,
         created: Date.now(),
       });
-
       user.save(function (err) {
         expect(err).to.be.an('null');
         done();
       });
+    });
 
+    it('should set the created date on creation', function (done) {
+      User.findOne({username: 'ugliestjam'}, function (err, user) {
+        if (err){
+          done(err);
+          return;
+        }
+        expect(user).to.have.property('created');
+        expect(user.created).to.be.instanceof(Date);
+        expect(user.created.getTime()).to.be.closeTo(Date.now(), 100);
+        done();
+      });
+    });
+
+    it('should not set the created date on update', function (done) {
+      User.findOne({username: 'carbonfizz'}, function (err, user) {
+        if (err){
+          done(err);
+          return;
+        }
+        user.email = 'carbonfizz@fizz.net';
+        user.save(function (err) {
+          expect(user).to.have.property('created');
+          expect(user.created).to.be.instanceof(Date);
+          expect(user.created.getTime()).to.be.not.closeTo(Date.now(), 100);
+          done();
+        });
+      });
+    });
+
+    it('should set the updated date on creation', function (done) {
+      User.findOne({username: 'ugliestjam'}, function (err, user) {
+        if (err){
+          done(err);
+          return;
+        }
+        expect(user).to.have.property('updated');
+        expect(user.updated).to.be.instanceof(Date);
+        expect(user.updated.getTime()).to.be.closeTo(Date.now(), 100);
+        done();
+      });
+    });
+
+    it('should set the updated date on update', function (done) {
+      User.findOne({username: 'carbonfizz'}, function (err, user) {
+        user.email = 'carbonfizz@fizz.net';
+        user.save(function (err) {
+          expect(user).to.have.property('updated');
+          expect(user.updated).to.be.instanceof(Date);
+          expect(user.updated.getTime()).to.be.closeTo(Date.now(), 100);
+          done(err);
+        });
+      });
     });
 
   });
@@ -95,10 +146,6 @@ describe('User Model', function () {
     it('should set the password using bcrypt', function (done) {
       const user = new User();
       user.setPassword('password', function (err) {
-        if (err) {
-          done(err);
-          return;
-        }
         expect(user).to.have.property('password');
         expect(user.password).to.be.a('string');
         done(err);
@@ -125,40 +172,28 @@ describe('User Model', function () {
 
     it('should find user via username', function (done) {
       User.findOne({username: 'carbonfizz'}, function (err, user) {
-        if (err){
-          done(err);
-          return;
-        }
         expect(user).to.have.property('displayName');
         expect(user.displayName).to.be.a('string');
         expect(user.displayName).to.equal('Carbon Fizz');
-        done();
+        done(err);
       });
     });
 
     it('should find user via email', function (done) {
       User.findOne({email: 'carbonfizz@example.com'}, function (err, user) {
-        if (err){
-          done(err);
-          return;
-        }
         expect(user).to.have.property('displayName');
         expect(user.displayName).to.be.a('string');
         expect(user.displayName).to.equal('Carbon Fizz');
-        done();
+        done(err);
       });
     });
 
     it('should find user via display name', function (done) {
       User.findOne({displayName: 'Carbon Fizz'}, function (err, user) {
-        if (err){
-          done(err);
-          return;
-        }
         expect(user).to.have.property('username');
         expect(user.username).to.be.a('string');
         expect(user.username).to.equal('carbonfizz');
-        done();
+        done(err);
       });
     });
 
@@ -169,29 +204,21 @@ describe('User Model', function () {
 
     it('should call callback with true if password is correct', function (done) {
       User.findOne({username: 'carbonfizz'}, function (err, user) {
-        if (err){
-          done(err);
-          return;
-        }
         user.checkPassword('agilezebra', function (res) {
           expect(res).to.be.a('boolean');
-          expect(res).to.be.true();
+          expect(res).to.be.true;
+          done(err);
         });
-        done();
       });
     });
 
     it('should call callback with false if password is incorrect', function (done) {
       User.findOne({username: 'carbonfizz'}, function (err, user) {
-        if (err){
-          done(err);
-          return;
-        }
         user.checkPassword('agilezebra1', function (res) {
           expect(res).to.be.a('boolean');
-          expect(res).to.be.false();
+          expect(res).to.be.false;
+          done(err);
         });
-        done();
       });
     });
 
@@ -202,34 +229,22 @@ describe('User Model', function () {
 
     it('should return true if password is correct', function (done) {
       User.findOne({username: 'carbonfizz'}, function (err, user) {
-        if (err){
-          done(err);
-          return;
-        }
         const res = user.checkPasswordSync('agilezebra');
         expect(res).to.be.a('boolean');
-        expect(res).to.be.true();
-        done();
+        expect(res).to.be.true;
+        done(err);
       });
     });
 
     it('should return false if password is incorrect', function (done) {
       User.findOne({username: 'carbonfizz'}, function (err, user) {
-        if (err){
-          done(err);
-          return;
-        }
         const res = user.checkPasswordSync('agilezebra1');
         expect(res).to.be.a('boolean');
-        expect(res).to.be.true();
-        done();
+        expect(res).to.be.false;
+        done(err);
       });
     });
 
   });
-
-
-
-
 
 });
