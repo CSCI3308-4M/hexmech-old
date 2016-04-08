@@ -1,12 +1,13 @@
+/* eslint-env node, mocha */
 'use strict';
 
 const expect = require('chai').expect;
 const httpError = require('../lib/http-error');
 
-describe('HTTP Error', function () {
 
-  it('returns node error with http status and message', function () {
-    const err = httpError(200)
+describe('HTTP Error', () => {
+  it('returns node error with http status and message', (done) => {
+    const err = httpError(200);
     expect(err).to.have.property('name');
     expect(err.name).to.be.a('string');
     expect(err.name).to.equal('Error');
@@ -16,10 +17,11 @@ describe('HTTP Error', function () {
     expect(err).to.have.property('message');
     expect(err.message).to.be.a('string');
     expect(err.message).to.equal('OK');
+    done();
   });
 
-  it('handles 301', function () {
-    const err = httpError(301)
+  it('handles 301', (done) => {
+    const err = httpError(301);
     expect(err).to.have.property('name');
     expect(err.name).to.be.a('string');
     expect(err.name).to.equal('Error');
@@ -29,10 +31,11 @@ describe('HTTP Error', function () {
     expect(err).to.have.property('message');
     expect(err.message).to.be.a('string');
     expect(err.message).to.equal('Moved Permanently');
+    done();
   });
 
-  it('handles 404', function () {
-    const err = httpError(404)
+  it('handles 404', (done) => {
+    const err = httpError(404);
     expect(err).to.have.property('name');
     expect(err.name).to.be.a('string');
     expect(err.name).to.equal('Error');
@@ -42,10 +45,11 @@ describe('HTTP Error', function () {
     expect(err).to.have.property('message');
     expect(err.message).to.be.a('string');
     expect(err.message).to.equal('Not Found');
+    done();
   });
 
-  it('handles 501', function () {
-    const err = httpError(501)
+  it('handles 501', (done) => {
+    const err = httpError(501);
     expect(err).to.have.property('name');
     expect(err.name).to.be.a('string');
     expect(err.name).to.equal('Error');
@@ -55,6 +59,6 @@ describe('HTTP Error', function () {
     expect(err).to.have.property('message');
     expect(err.message).to.be.a('string');
     expect(err.message).to.equal('Not Implemented');
+    done();
   });
-
 });
