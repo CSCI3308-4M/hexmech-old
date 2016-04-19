@@ -14,10 +14,10 @@ bundles:
 	mkdir bundles
 
 bundles/libs.js: Libs
-	$(BROWSERIFY) $(RLIBS) -d -p [minifyify --map /javascripts/$@.map  --output $@.map ] > $@
+	$(BROWSERIFY) $(RLIBS) -d -t [babelify --presets es2015] -p [minifyify --map /javascripts/$@.map  --output $@.map ] > $@
 
 bundles/%.js: %.js Libs
-	$(BROWSERIFY) $(XLIBS) $< -d -p [minifyify --map /javascripts/$@.map  --output $@.map ] > $@
+	$(BROWSERIFY) $(XLIBS) $< -d -t [babelify --presets es2015] -p [minifyify --map /javascripts/$@.map  --output $@.map ] > $@
 
 clean:
 	rm -rf bundles

@@ -1,38 +1,49 @@
-var express = require('express');
-var router = express.Router();
-var httpError = require('http-error');
-var package = require('package');
+'use strict';
+const express = require('express');
+const httpError = require('http-error');
+const packageConfig = require('packageConfig');
+const router = new express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
 
   data = {
-    title: package.name,
-    version: package.version,
-    description: package.description,
-    repository: package.repository.url,
-    contributors: package.contributors,
+    title: packageConfig.name,
+    version: packageConfig.version,
+    description: packageConfig.description,
+    repository: packageConfig.repository.url,
+    contributors: packageConfig.contributors,
     signupLink: 'signup',
     loginLink: 'login',
     gameLink: 'game',
     game2Link: 'game2'
+router.get('/', (req, res, next) => {
+  // data to be passed to template
+  const data = {
+    title: packageConfig.name,
+    version: packageConfig.version,
+    description: packageConfig.description,
+    repository: packageConfig.repository.url,
+    contributors: packageConfig.contributors,
+    signupURL: 'signup',
+    loginURL: 'login',
+    gameLink: 'game',
+    game2Link: 'game2'
   };
 
+  // display home page
   res.format({
-    'text/html': function(){
+    'text/html'() {
       res.render('index', data);
     },
-
-    'application/json': function(){
+    'application/json'() {
       res.json(data);
     },
-
-    'default': function() {
+    default() {
       // log the request and respond with 406
       next(httpError(406));
-    }
+    },
   });
-
 });
 
 module.exports = router;

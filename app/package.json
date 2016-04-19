@@ -15,6 +15,18 @@
     {
       "name": "Michael R. Shannon",
       "email": "mrshannon.aerospace@gmail.com"
+    },
+    {
+      "name": "Matthew Kaplan",
+      "email": "maka0945@colorado.edu"
+    },
+    {
+      "name": "Max Lookabough",
+      "email": "Max.Lookabaugh@colorado.edu"
+    },
+    {
+      "name": "Mack Colwell",
+      "email": "m.grace.colwell@gmail.com"
     }
   ],
   "files": [
@@ -27,13 +39,26 @@
   },
   "dependencies": {
     "app-module-path": "^1.0.5",
+    "babel-preset-es2015": "^6.6.0",
+    "babelify": "^7.2.0",
+    "bcrypt": "^0.8.5",
     "body-parser": "~1.13.2",
+    "bootstrap": "^3.3.6",
     "cookie-parser": "~1.3.5",
     "debug": "~2.2.0",
+    "eslint": "^2.4.0",
+    "eslint-config-airbnb": "^6.1.0",
+    "eslint-plugin-react": "^4.2.3",
     "express": "~4.13.1",
+    "express-validator": "^2.19.1",
     "http-status-codes": "^1.0.6",
     "jade": "~1.11.0",
     "jquery": "^2.2.1",
+    "jquery-validation": "^1.15.0",
+    "minifyify": "^7.3.2",
+    "mocha": "^2.4.5",
+    "mongodb-uri": "^0.9.7",
+    "mongoose": "^4.4.6",
     "morgan": "~1.6.1",
     "phaser": "^2.4.6",
     "serve-favicon": "~2.3.0",
@@ -42,12 +67,16 @@
   },
   "devDependencies": {
     "browserify": "^13.0.0",
-    "minifyify": "^7.3.1",
-    "mocha": "^2.4.5"
+    "chai": "^3.5.0",
+    "request": "^2.70.0",
+    "eslint-config-airbnb": "^6.1.0",
+    "eslint-plugin-react": "^4.2.3",
+    "mocha": "^2.4.5",
+    "mockgoose": "^6.0.0"
   },
   "scripts": {
     "start": "node ./bin/www",
-    "prepublish": "echo \"Getting ready to publish HexMech\"",
-    "test": "echo \"Testing HexMech\""
+    "prepublish": "make javascripts",
+    "test": "./node_modules/.bin/mocha --recursive --reporter spec"
   }
 }

@@ -1,0 +1,6 @@
+{
+  "port": 8080,
+  "bcryptStrength": 14,
+  "jwtSecret": "key",
+  "mongoURI": "mongodb://hexmech:password@localhost:27017/hexmech"
+}
