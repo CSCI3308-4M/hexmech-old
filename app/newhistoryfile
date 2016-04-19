@@ -1,0 +1,2000 @@
+ 1006  gedit bits.c 
+ 1007  exit
+ 1008  ping luna
+ 1009  exit
+ 1010  history | grep sync
+ 1011  exit
+ 1012  history | grep dd
+ 1013  sudo dd bs=4M if=2015-11-21-raspbian-jessie-lite.img of=/dev/mmcblk0
+ 1014  sync
+ 1015  exit
+ 1016  cd datalab/datalab-handout/
+ 1017  gedit bits.c 
+ 1018  exit
+ 1019  nm-applet 
+ 1020  nm-applet 
+ 1021  exit
+ 1022  tint2
+ 1023  exit
+ 1024  startx
+ 1025  sudo halt
+ 1026  exit
+ 1027  gedit /etc/rc.conf 
+ 1028  exit
+ 1029  make btest
+ 1030  make btest
+ 1031  ./btest 
+ 1032  make btest
+ 1033  make btest
+ 1034  make btest
+ 1035  make btest
+ 1036  ./btest 
+ 1037  ./btest 
+ 1038  make btest
+ 1039  ./btest 
+ 1040  exit
+ 1041  sudo gedit /etc/init.d/
+ 1042  sudo gedit /etc/rc.conf 
+ 1043  cd datalab/datalab-handout/
+ 1044  gedit bits.c
+ 1045  exit
+ 1046  tint2
+ 1047  sudo halt
+ 1048  startx
+ 1049  nm-applet 
+ 1050  exit
+ 1051  tint2
+ 1052  sudo halt
+ 1053  startx
+ 1054  cd datalab/datalab-handout/
+ 1055  ls
+ 1056  ./btest | head
+ 1057  make btest
+ 1058  make btest
+ 1059  ./btest 
+ 1060  ./btest | head
+ 1061  make btest
+ 1062  ./btest | head
+ 1063  ./btest 
+ 1064  ./btest 
+ 1065  ./btest | less
+ 1066  make btest
+ 1067  ./btest 
+ 1068  ./make btest
+ 1069  make btest
+ 1070  make btest
+ 1071  ./btest | tail
+ 1072  ./btest | less
+ 1073  make btest
+ 1074  ./btest | less
+ 1075  make btest
+ 1076  ./btest | tail
+ 1077  make btest
+ 1078  ./btest | tail
+ 1079  make btest
+ 1080  ./btest | tail
+ 1081  make btest
+ 1082  ./btest | tail
+ 1083  make btest
+ 1084  make btest
+ 1085  ./btest | tail
+ 1086  make btest
+ 1087  ./btest | tail
+ 1088  make btest
+ 1089  ./btest | tail
+ 1090  ./btest | less
+ 1091  make btest
+ 1092  ./btest | less
+ 1093  make btest
+ 1094  ./btest | less
+ 1095  make btest
+ 1096  ./btest | tail
+ 1097  make btest
+ 1098  ./btest | tail
+ 1099  make btest
+ 1100  ./btest | tail
+ 1101  ./btest | tail
+ 1102  make btest
+ 1103  ./btest | tail
+ 1104  make btest
+ 1105  ./btest | tail
+ 1106  make btest
+ 1107  ./btest | tail
+ 1108  make btest
+ 1109  ./btest | tail
+ 1110  make btest
+ 1111  ./btest | tail
+ 1112  make btest
+ 1113  ./btest | tail
+ 1114  make btest
+ 1115  ./btest | tail
+ 1116  make btest
+ 1117  ./btest | tail
+ 1118  ./btest | less
+ 1119  make btest
+ 1120  ./btest | tail
+ 1121  make btest
+ 1122  ./btest | tail
+ 1123  make btest
+ 1124  ./btest | tail
+ 1125  make btest
+ 1126  ./btest | tail
+ 1127  make btest
+ 1128  ./btest | tail
+ 1129  make btest
+ 1130  ./btest | tail
+ 1131  make btest
+ 1132  ./btest | tail
+ 1133  make btest
+ 1134  ./btest | tail
+ 1135  make btest
+ 1136  ./btest | tail
+ 1137  make btest
+ 1138  ./btest | tail
+ 1139  ./btest | less
+ 1140  make btest
+ 1141  ./btest | tail
+ 1142  ./btest | less
+ 1143  ./btest | tail
+ 1144  make btest
+ 1145  ./btest | tail
+ 1146  make btest
+ 1147  ./btest | less
+ 1148  make btest
+ 1149  ./btest | less
+ 1150  make btest
+ 1151  ./btest | less
+ 1152  make btest
+ 1153  ./btest | tail
+ 1154  make btest
+ 1155  ./btest | tail
+ 1156  ./btest | grep div
+ 1157  make btest
+ 1158  ./btest | tail
+ 1159  make btest
+ 1160  ./btest | tail
+ 1161  make btest
+ 1162  ./btest | tail
+ 1163  ./btest | grep div
+ 1164  ./btest | grep (div | shou)
+ 1165  ./btest | grep (div | shouclear
+ 1166  ./btest | grep (div | should)
+ 1167  ./btest | grep div | should
+ 1168  ./btest | grep div || should
+ 1169  ./btest | grep div || hould
+ 1170  ./btest | grep [div || hould]
+ 1171  ./btest | grep [div | hould]
+ 1172  ./btest | grep div
+ 1173  clear
+ 1174  make btest
+ 1175  make btest
+ 1176  ./btest | tail
+ 1177  ./btest | grep div
+ 1178  ./btest | less
+ 1179  make btest
+ 1180  ./btest | tail
+ 1181  make btest
+ 1182  make btest
+ 1183  ./btest | tail
+ 1184  make btest
+ 1185  ./btest | tail
+ 1186  ./btest | grep div
+ 1187  make btest
+ 1188  ./btest | grep div
+ 1189  make btest
+ 1190  ./btest | grep div
+ 1191  ./btest | tail
+ 1192  make btest
+ 1193  ./btest | tail
+ 1194  ./btest > newfile
+ 1195  make btest
+ 1196  ./btest | tail
+ 1197  ./btest > newfile2
+ 1198  make btest
+ 1199  ./btest | tail
+ 1200  ./btest > newfile3
+ 1201  make btest
+ 1202  make btest
+ 1203  ./btest | tail
+ 1204  ./btest > newfile
+ 1205  make btest
+ 1206  ./btest | tail
+ 1207  make btest
+ 1208  ./btest | tail
+ 1209  ./btest > newfile
+ 1210  make btest
+ 1211  ./btest | tail
+ 1212  make btest
+ 1213  ./btest | tail
+ 1214  ./btest > newfile
+ 1215  ./dlc bits.c 
+ 1216  make btest
+ 1217  make btest
+ 1218  make btest
+ 1219  make btest
+ 1220  make btest
+ 1221  ./btest 
+ 1222  make btest
+ 1223  ./btest 
+ 1224  make btest
+ 1225  ./btest 
+ 1226  make btest
+ 1227  ./btest 
+ 1228  make btest
+ 1229  ./btest 
+ 1230  make btest
+ 1231  ./btest 
+ 1232  make btest
+ 1233  ./btest 
+ 1234  make btest
+ 1235  ./btest 
+ 1236  make btest
+ 1237  make btest
+ 1238  ./btest 
+ 1239  ./btest 
+ 1240  make btest
+ 1241  ./btest 
+ 1242  ./btest > newfile
+ 1243  make btest
+ 1244  ./btest > newfile2
+ 1245  make btest
+ 1246  ./btest | tail
+ 1247  make btest
+ 1248  ./btest | tail
+ 1249  ./btest > newfile2
+ 1250  make btest
+ 1251  ./btest | tail
+ 1252  make btest
+ 1253  ./btest | tail
+ 1254  ./btest > newfile
+ 1255  make btest
+ 1256  ./btest > newfile2
+ 1257  make btest
+ 1258  ./btest | tail
+ 1259  make btest
+ 1260  ./btest | tail
+ 1261  make btest
+ 1262  ./btest | tail
+ 1263  make btest
+ 1264  ./btest | tail
+ 1265  ./btest | head
+ 1266  make btest
+ 1267  ./btest | head
+ 1268  make btest
+ 1269  ./btest | head
+ 1270  make btest
+ 1271  ./btest | head
+ 1272  make btest
+ 1273  ./btest | head
+ 1274  make btest
+ 1275  ./btest | head
+ 1276  make btest
+ 1277  ./btest | head
+ 1278  make btest
+ 1279  ./btest | head
+ 1280  make btest
+ 1281  ./btest | head
+ 1282  make btest
+ 1283  ./btest | head
+ 1284  make btest
+ 1285  ./btest | head
+ 1286  make btest
+ 1287  ./btest | head
+ 1288  make btest
+ 1289  ./btest | head
+ 1290  make btest
+ 1291  ./btest | head
+ 1292  make btest
+ 1293  ./btest | head
+ 1294  make btest
+ 1295  ./btest
+ 1296  ./btest | grep is
+ 1297  ./btest | grep qu
+ 1298  make btest
+ 1299  make btest
+ 1300  make btest
+ 1301  ./btest | grep isN
+ 1302  make btest
+ 1303  ./btest | grep isN
+ 1304  make btest
+ 1305  ./btest | grep isN
+ 1306  make btest
+ 1307  ./btest | grep isN
+ 1308  make btest
+ 1309  ./btest | grep isN
+ 1310  make btest
+ 1311  ./btest | grep isN
+ 1312  make btest
+ 1313  make btest
+ 1314  ./btest | grep isN
+ 1315  make btest
+ 1316  ./btest | grep isN
+ 1317  ./btest | tail
+ 1318  ./dlc bits.c
+ 1319  ./dlc bits.c
+ 1320  ./dlc bits.c
+ 1321  ./btest | tail
+ 1322  ./btest | tail
+ 1323  ./dlc bits.c
+ 1324  ./dlc bits.c
+ 1325  make btest
+ 1326  ./btest | tail
+ 1327  exit
+ 1328  gedit bits.c 
+ 1329  exit
+ 1330  sudo emerge -a android-tools-adb
+ 1331  sudo emerge -a android-tools
+ 1332  sudo emerge -a android-tools-adb
+ 1333  sudo emerge -a android-studio && sudo emerge -a android-ndk
+ 1334  exit
+ 1335  mount
+ 1336  dmesg
+ 1337  dmesg
+ 1338  dmesg | tail
+ 1339  dmesg 
+ 1340  sudo mount /dev/usbmon1 /media/card/
+ 1341  sudo mount /dev/usb /media/card/
+ 1342  exit
+ 1343  adb devices
+ 1344  adb devices
+ 1345  adb devices
+ 1346  sudo adb devices
+ 1347  adb devices
+ 1348  adb devices
+ 1349  adb backup -f myphonebackup.adb -apk -all
+ 1350  adb shell
+ 1351  adb devices
+ 1352  adb devices
+ 1353  adb backup -f myphonebackup2.adb -apk -all
+ 1354  adb restore myphonebackup2.adb 
+ 1355  adb devices
+ 1356  adb devices
+ 1357  adb devices
+ 1358  adb devices
+ 1359  adb devices
+ 1360  adb restore myphonebackup2.adb 
+ 1361  exit
+ 1362  ssh inara.cchildress.org
+ 1363  exit
+ 1364  dmesg | tail
+ 1365  exit
+ 1366  nm-applet 
+ 1367  nm-applet 
+ 1368  exit
+ 1369  tint2
+ 1370  exit
+ 1371  startx
+ 1372  sudo halt
+ 1373  nm-applet 
+ 1374  exit
+ 1375  tint2
+ 1376  exit
+ 1377  startx
+ 1378  sudo halt
+ 1379  tint2
+ 1380  exit
+ 1381  startx
+ 1382  sudo halt
+ 1383  nm-applet 
+ 1384  exit
+ 1385  tint2
+ 1386  exit
+ 1387  startx
+ 1388  sudo halt
+ 1389  curl -L https://gist.github.com/dgraham/acfdc4ffc2d6e74fd587/archive/f6f52f1d2a89d627cdee9f3ae76f23f4eefa24ce.zip > hw1.zip
+ 1390  unzip hw1.zip -d hw1
+ 1391  ls
+ 1392  mv hw1 bashcr/
+ 1393  cd bashcr/
+ 1394  cd hw1/
+ 1395  ls
+ 1396  cd acfdc4ffc2d6e74fd587-f6f52f1d2a89d627cdee9f3ae76f23f4eefa24ce/
+ 1397  ls
+ 1398  cd ..
+ 1399  mv acfdc4ffc2d6e74fd587-f6f52f1d2a89d627cdee9f3ae76f23f4eefa24ce/ long
+ 1400  cd long
+ 1401  ls
+ 1402  man tr
+ 1403  ls
+ 1404  ./regex.sh
+ 1405  sudo chmod u+x regex.sh 
+ 1406  ./regex.sh 
+ 1407  ./regex.sh 
+ 1408  ./regex.sh 
+ 1409  ./regex.sh regex_practice_data.txt 
+ 1410  ./regex.sh regex_practice_data.txt 
+ 1411  ./regex.sh regex_practice_data.txt 
+ 1412  ./regex.sh regex_practice_data.txt 
+ 1413  ./regex.sh regex_practice_data.txt 
+ 1414  ./regex.sh regex_practice_data.txt 
+ 1415  ./regex.sh regex_practice_data.txt 
+ 1416  ./regex.sh regex_practice_data.txt 
+ 1417  ./regex.sh regex_practice_data.txt 
+ 1418  ./regex.sh regex_practice_data.txt 
+ 1419  ./regex.sh regex_practice_data.txt 
+ 1420  ./regex.sh regex_practice_data.txt 
+ 1421  ./regex.sh regex_practice_data.txt 
+ 1422  ./regex.sh regex_practice_data.txt 
+ 1423  ./regex.sh regex_practice_data.txt 
+ 1424  ./regex.sh regex_practice_data.txt 
+ 1425  ./regex.sh regex_practice_data.txt 
+ 1426  ./regex.sh regex_practice_data.txt 
+ 1427  ./regex.sh regex_practice_data.txt 
+ 1428  ./regex.sh regex_practice_data.txt 
+ 1429  ./regex.sh regex_practice_data.txt 
+ 1430  ./regex.sh regex_practice_data.txt 
+ 1431  ./regex.sh regex_practice_data.txt 
+ 1432  ./regex.sh regex_practice_data.txt 
+ 1433  ./regex.sh regex_practice_data.txt 
+ 1434  ./regex.sh regex_practice_data.txt 
+ 1435  ./regex.sh regex_practice_data.txt 
+ 1436  ./regex.sh regex_practice_data.txt 
+ 1437  ./regex.sh regex_practice_data.txt 
+ 1438  ./regex.sh regex_practice_data.txt 
+ 1439  ./regex.sh regex_practice_data.txt 
+ 1440  ./regex.sh regex_practice_data.txt 
+ 1441  ./regex.sh regex_practice_data.txt 
+ 1442  ./regex.sh regex_practice_data.txt 
+ 1443  ./regex.sh regex_practice_data.txt 
+ 1444  ./regex.sh regex_practice_data.txt 
+ 1445  ./regex.sh regex_practice_data.txt 
+ 1446  ./regex.sh regex_practice_data.txt 
+ 1447  ./regex.sh regex_practice_data.txt 
+ 1448  ./regex.sh regex_practice_data.txt 
+ 1449  exit
+ 1450  man grep
+ 1451  exit
+ 1452  mv regex.sh regex-answers.sh
+ 1453  exit
+ 1454  zip Colwell_HW1.zip grades.sh grades-awk.sh regex-answers.sh 
+ 1455  exit
+ 1456  ./regex.sh regex_practice_data.txt 
+ 1457  ./regex.sh regex_practice_data.txt 
+ 1458  ./regex.sh regex_practice_data.txt 
+ 1459  history > hist.txt
+ 1460  echo hist.txt | grep chmod
+ 1461  echo hist.txt | grep chown
+ 1462  echo hist.txt
+ 1463  cat hist.txt | grep chown
+ 1464  cat hist.txt | grep chmod
+ 1465  sudo chmod u+x grades.sh
+ 1466  touch grades-awk.sh
+ 1467  sudo chmod u+x grades-awk.sh 
+ 1468  ./grades.s
+ 1469  ./grades.sh 
+ 1470  ./grades.sh grades.txt 
+ 1471  ./grades.sh grades.txt 
+ 1472  ./grades.sh grades.txt 
+ 1473  ./grades.sh grades.txt 
+ 1474  ./grades.sh grades.txt 
+ 1475  ./grades.sh grades.txt 
+ 1476  ./grades.sh grades.txt 
+ 1477  ./grades.sh grades.txt 
+ 1478  ./grades.sh grades.txt 
+ 1479  ./grades.sh grades.txt 
+ 1480  pwd
+ 1481  ./grades.sh grades.txt 
+ 1482  mv tempcam gr.txt
+ 1483  ./grades.sh gr.txt 
+ 1484  ./grades.sh gr.txt 
+ 1485  ./grades.sh gr.txt 
+ 1486  ./grades.sh gr.txt 
+ 1487  ./grades.sh gr.txt 
+ 1488  ./grades-awk.sh gr.txt 
+ 1489  ./grades-awk.sh gr.txt 
+ 1490  ./grades-awk.sh gr.txt 
+ 1491  ./grades-awk.sh gr.txt 
+ 1492  ./grades-awk.sh gr.txt 
+ 1493  ./grades-awk.sh gr.txt 
+ 1494  ./grades-awk.sh gr.txt 
+ 1495  ./grades-awk.sh gr.txt 
+ 1496  ./grades-awk.sh gr.txt 
+ 1497  ./grades-awk.sh gr.txt 
+ 1498  ./grades-awk.sh gr.txt 
+ 1499  ./grades-awk.sh gr.txt 
+ 1500  ./grades-awk.sh gr.txt 
+ 1501  ./grades.sh gr.txt 
+ 1502  ./grades.sh gr.txt 
+ 1503  ./grades.sh gr.txt 
+ 1504  ./grades.sh gr.txt 
+ 1505  ./grades.sh gr.txt 
+ 1506  ./grades.sh gr.txt 
+ 1507  ./grades.sh gr.txt 
+ 1508  man wc
+ 1509  man wc
+ 1510  ./grades.sh gr.txt 
+ 1511  ./grades.sh gr.txt 
+ 1512  ./grades.sh gr.txt 
+ 1513  ./grades.sh gr.txt 
+ 1514  man cat
+ 1515  man echo
+ 1516  ./grades.sh gr.txt 
+ 1517  ./grades.sh gr.txt 
+ 1518  ./grades.sh gr.txt 
+ 1519  ./grades.sh gr.txt 
+ 1520  ./grades.sh gr.txt 
+ 1521  ./grades.sh gr.txt 
+ 1522  ./grades.sh gr.txt 
+ 1523  ./grades.sh gr.txt 
+ 1524  ./grades.sh gr.txt 
+ 1525  ./grades.sh gr.txt 
+ 1526  ./grades.sh gr.txt 
+ 1527  ./grades.sh gr.txt 
+ 1528  ./grades.sh gr.txt 
+ 1529  ./grades.sh gr.txt 
+ 1530  ./grades.sh gr.txt 
+ 1531  ./grades.sh gr.txt 
+ 1532  ./grades.sh gr.txt 
+ 1533  ./grades.sh gr.txt 
+ 1534  ./grades.sh gr.txt 
+ 1535  ./grades.sh gr.txt 
+ 1536  ./grades.sh gr.txt 
+ 1537  ./grades.sh gr.txt 
+ 1538  ./grades.sh gr.txt 
+ 1539  ./grades.sh gr.txt 
+ 1540  ./grades.sh gr.txt 
+ 1541  ./grades.sh gr.txt 
+ 1542  ./grades.sh gr.txt 
+ 1543  ./grades.sh gr.txt 
+ 1544  ./grades.sh gr.txt 
+ 1545  ./grades.sh gr.txt 
+ 1546  ./grades.sh gr.txt 
+ 1547  ./grades.sh gr.txt 
+ 1548  ./grades.sh gr.txt 
+ 1549  ./grades.sh gr.txt 
+ 1550  ./grades.sh gr.txt 
+ 1551  ./grades.sh gr.txt 
+ 1552  ./grades.sh gr.txt 
+ 1553  ./grades.sh gr.txt 
+ 1554  ./grades.sh gr.txt 
+ 1555  ./grades.sh gr.txt 
+ 1556  ./grades.sh gr.txt 
+ 1557  ./grades.sh gr.txt 
+ 1558  ./grades.sh gr.txt 
+ 1559  ./grades.sh gr.txt 
+ 1560  ./grades.sh gr.txt 
+ 1561  ./grades.sh gr.txt 
+ 1562  ./grades.sh gr.txt 
+ 1563  ./grades.sh gr.txt 
+ 1564  ./grades.sh gr.txt 
+ 1565  ./grades.sh gr.txt 
+ 1566  ./grades.sh gr.txt 
+ 1567  ./grades.sh gr.txt 
+ 1568  ./grades.sh gr.txt 
+ 1569  ./grades.sh gr.txt 
+ 1570  ./grades.sh gr.txt 
+ 1571  ./grades.sh gr.txt 
+ 1572  ./grades.sh gr.txt 
+ 1573  ./grades.sh gr.txt 
+ 1574  ./grades.sh gr.txt 
+ 1575  ./grades.sh gr.txt 
+ 1576  ./grades.sh gr.txt 
+ 1577  ./grades.sh gr.txt 
+ 1578  ./grades.sh gr.txt 
+ 1579  ./grades.sh gr.txt 
+ 1580  ./grades.sh gr.txt 
+ 1581  ./grades.sh gr.txt 
+ 1582  ./grades.sh gr.txt 
+ 1583  ./grades.sh gr.txt 
+ 1584  ./grades.sh gr.txt 
+ 1585  ./grades.sh gr.txt 
+ 1586  ./grades.sh gr.txt 
+ 1587  ./grades.sh gr.txt 
+ 1588  ./grades.sh gr.txt 
+ 1589  ./grades.sh gr.txt 
+ 1590  ./grades.sh gr.txt 
+ 1591  ./grades.sh gr.txt 
+ 1592  ./grades.sh gr.txt 
+ 1593  ./grades.sh gr.txt 
+ 1594  ./grades.sh gr.txt 
+ 1595  ./grades.sh gr.txt 
+ 1596  ./grades.sh gr.txt 
+ 1597  ./grades.sh gr.txt 
+ 1598  ./grades.sh gr.txt 
+ 1599  ./grades.sh gr.txt 
+ 1600  ./grades.sh gr.txt 
+ 1601  ./grades-awk.sh gr.txt 
+ 1602  ./grades-awk.sh gr.txt 
+ 1603  ./grades.sh gr.txt 
+ 1604  ./grades.sh gr.txt 
+ 1605  ./grades.sh gr.txt 
+ 1606  ./grades.sh gr.txt 
+ 1607  ./grades.sh gr.txt 
+ 1608  ./grades.sh gr.txt 
+ 1609  ./grades.sh gr.txt 
+ 1610  ./grades.sh gr.txt 
+ 1611  ./grades.sh gr.txt 
+ 1612  ./grades.sh gr.txt 
+ 1613  ./grades.sh gr.txt 
+ 1614  ./grades.sh gr.txt 
+ 1615  ./grades.sh gr.txt 
+ 1616  ./grades.sh gr.txt 
+ 1617  man zip
+ 1618  exit
+ 1619  cd bashcr/
+ 1620  cd hw1/long/
+ 1621  ls
+ 1622  gedit regex.sh 
+ 1623  gedit grades.sh
+ 1624  exit
+ 1625  man dc
+ 1626  exit
+ 1627  man echo
+ 1628  exit
+ 1629  man sort
+ 1630  man expr
+ 1631  exit
+ 1632  man awk
+ 1633  exit
+ 1634  ./grades.sh gr.txt 
+ 1635  ./grades.sh gr.txt 
+ 1636  ./grades.sh gr.txt 
+ 1637  ./grades.sh gr.txt 
+ 1638  ./grades.sh gr.txt 
+ 1639  ./grades.sh gr.txt 
+ 1640  ./grades.sh gr.txt 
+ 1641  ./grades.sh gr.txt 
+ 1642  ./grades.sh gr.txt 
+ 1643  ./grades.sh gr.txt 
+ 1644  ./grades.sh gr.txt 
+ 1645  history | grep zip
+ 1646  zip Colwell_HW1.zip grades.sh grades-awk.sh regex-answers.sh 
+ 1647  exit
+ 1648  cd bashcr/hw1/long/
+ 1649  ls
+ 1650  gedit grades.sh 
+ 1651  exit
+ 1652  man ping
+ 1653  man ping
+ 1654  man cron
+ 1655  exit
+ 1656  ls /etc/
+ 1657  sudo gedit /etc/rc.conf 
+ 1658  exit
+ 1659  cp pings.sh /etc/cron.hourly/
+ 1660  sudo cp pings.sh /etc/cron.hourly/
+ 1661  sudo mv /etc/cron.hourly/ ~/cronscript
+ 1662  exit
+ 1663  ./pings.sh 
+ 1664  ./pings.sh 
+ 1665  ./pings.sh 
+ 1666  ./pings.sh 
+ 1667  ./pings.sh 
+ 1668  ./pings.sh 
+ 1669  ./pings.sh 
+ 1670  ./pings.sh 
+ 1671  ./pings.sh 
+ 1672  exit
+ 1673  ping -c 100 8.8.8.8
+ 1674  chromium
+ 1675  exit
+ 1676  exit
+ 1677  history | grep chmod
+ 1678  sudo chmod u+x pings.sh
+ 1679  ./pings.sh 
+ 1680  ./pings.sh 
+ 1681  ./pings.sh 
+ 1682  ls | grep 02
+ 1683  cat 02-02-16 
+ 1684  rm 02-02-16 
+ 1685  rm 02-02-16 
+ 1686  ./pings.sh 
+ 1687  ./pings.sh 
+ 1688  cat pingresults.txt 
+ 1689  ./pings.sh 
+ 1690  cat pingresults.txt 
+ 1691  gedit pings.sh 
+ 1692  exit
+ 1693  ping -c 100 8.8.8.8
+ 1694  ping -c 100 8.8.8.8
+ 1695  exit
+ 1696  nm-applet 
+ 1697  nm-applet 
+ 1698  exit
+ 1699  tint2
+ 1700  sudo halt
+ 1701  startx
+ 1702  nm-applet 
+ 1703  exit
+ 1704  tint2
+ 1705  exit
+ 1706  startx
+ 1707  sudo halt
+ 1708  aoeu
+ 1709  exit
+ 1710  man mount | grep options
+ 1711  chromium
+ 1712  exit
+ 1713  nm-applet 
+ 1714  nm-applet 
+ 1715  exit
+ 1716  tint2
+ 1717  exit
+ 1718  startx
+ 1719  sudo halt
+ 1720  cd datalab/datalab-handout/
+ 1721  ./btest 
+ 1722  sudo halt
+ 1723  cd datalab/datalab-handout/
+ 1724  ./btest 
+ 1725  gedit bits.c 
+ 1726  exit
+ 1727  startx
+ 1728  sudo halt
+ 1729  nm-applet 
+ 1730  exit
+ 1731  tint2
+ 1732  exit
+ 1733  exit
+ 1734  tint2
+ 1735  exit
+ 1736  find *queue*
+ 1737  find ~/ *queue*
+ 1738  exit
+ 1739  startx
+ 1740  sudo halt
+ 1741  nm-applet 
+ 1742  exit
+ 1743  tint2
+ 1744  exit
+ 1745  startx
+ 1746  sudo halt
+ 1747  ping 8.8.8.8
+ 1748  exit
+ 1749  ping kaylee
+ 1750  ping minecraft
+ 1751  exit
+ 1752  ping 8.8.8.8
+ 1753  exit
+ 1754  nm-applet 
+ 1755  nm-applet 
+ 1756  exit
+ 1757  tint2
+ 1758  exit
+ 1759  startx
+ 1760  sudo halt
+ 1761  startx
+ 1762  tint2
+ 1763  exit
+ 1764  startx
+ 1765  sudo halt
+ 1766  gedit stuff/classschedule 
+ 1767  thunar
+ 1768  exit
+ 1769  nm-applet 
+ 1770  exit
+ 1771  tint2
+ 1772  exit
+ 1773  startx
+ 1774  sudo halt
+ 1775  ping 8.8.8.8
+ 1776  ping 8.8.8.8
+ 1777  ping kaylee
+ 1778  ping 8.8.8.8
+ 1779  ping 8.8.8.8
+ 1780  ping 8.8.8.8
+ 1781  exit
+ 1782  firefox
+ 1783  firefox
+ 1784  ping 8.8.8.8
+ 1785  cabbage 
+ 1786  ping 8.8.8.8
+ 1787  exit
+ 1788  nm-applet 
+ 1789  nm-applet 
+ 1790  exit
+ 1791  tint2
+ 1792  exit
+ 1793  startx
+ 1794  sudo halt
+ 1795  VirtualBox
+ 1796  exit
+ 1797  sudo usermod -a -G vboxusers mack
+ 1798  exit
+ 1799  nm-applet 
+ 1800  exit
+ 1801  tint2
+ 1802  exit
+ 1803  startx
+ 1804  exit
+ 1805  thunar
+ 1806  exit
+ 1807  tint2
+ 1808  exit
+ 1809  touch dovms.sh
+ 1810  nano dovms.sh 
+ 1811  chmod +x dovms.sh 
+ 1812  sudo ./dovms.sh 
+ 1813  exit
+ 1814  VirtualBox 
+ 1815  ls
+ 1816  ls Downloads/
+ 1817  cp Downloads/cu-cs-vm-spring16-xfce-x64-v1.1 ~/
+ 1818  VirtualBox 
+ 1819  VirtualBox 
+ 1820  VirtualBox 
+ 1821  exit
+ 1822  startx
+ 1823  free
+ 1824  free -h
+ 1825  exit
+ 1826  tint2
+ 1827  exit
+ 1828  startx
+ 1829  sudo halt
+ 1830  ls .VirtualBox/
+ 1831  exit
+ 1832  printenv
+ 1833  printenv | grep VBOX
+ 1834  exit
+ 1835  tint2
+ 1836  exit
+ 1837  VirtualBox
+ 1838  ls | grep sh
+ 1839  ./dovms.sh 
+ 1840  sudo ./dovms.sh 
+ 1841  VirtualBox
+ 1842  exit
+ 1843  startx
+ 1844  sudo halt
+ 1845  VirtualBox 
+ 1846  ./dovms.sh 
+ 1847  sudo ./dovms.sh 
+ 1848  VirtualBox 
+ 1849  sudo halt
+ 1850  startx
+ 1851  nm-applet 
+ 1852  exit
+ 1853  tint2
+ 1854  sudo halt
+ 1855  startx
+ 1856  VirtualBox 
+ 1857  sudo ./dovms.sh 
+ 1858  VirtualBox 
+ 1859  exit
+ 1860  tint2
+ 1861  exit
+ 1862  startx
+ 1863  sudo halt
+ 1864  nm-applet 
+ 1865  exit
+ 1866  tint2
+ 1867  exit
+ 1868  mack
+ 1869  startx
+ 1870  sudo halt
+ 1871  nm-applet 
+ 1872  exit
+ 1873  tint2
+ 1874  exit
+ 1875  startx
+ 1876  sudo halt
+ 1877  less /bin/ls
+ 1878  exit
+ 1879  nm-applet 
+ 1880  nm-applet 
+ 1881  exit
+ 1882  tint2
+ 1883  sudo halt
+ 1884  startx
+ 1885  gedit
+ 1886  exit
+ 1887  VirtualBox 
+ 1888  sudo ./dovms.sh 
+ 1889  VirtualBox 
+ 1890  exit
+ 1891  ./pings.sh 
+ 1892  cd programs/
+ 1893  g++ -o che -Wall cheesepicker
+ 1894  ./cheesepicker 
+ 1895  exit
+ 1896  tint2
+ 1897  sudo halt
+ 1898  startx
+ 1899  cd programs/
+ 1900  ./knowing 
+ 1901  file-roller ~/compsys/
+ 1902  file-roller ~/compsys/bomb101.tar 
+ 1903  exit
+ 1904  VirtualBox 
+ 1905  sudo ./dovms.sh 
+ 1906  VirtualBox 
+ 1907  exit
+ 1908  sudo emerge -a ghc
+ 1909  exit
+ 1910  nm-applet 
+ 1911  exit
+ 1912  tint2
+ 1913  exit
+ 1914  startx
+ 1915  sudo halt
+ 1916  ./dovms.sh 
+ 1917  sudo ./dovms.sh 
+ 1918  VirtualBox 
+ 1919  exit
+ 1920  tint2
+ 1921  sudo halt
+ 1922  startx
+ 1923  cd programs/
+ 1924  g++ -o textadventure -Wall textadventure.cpp 
+ 1925  g++ -o textadventure -Wall textadventure.cpp 
+ 1926  g++ -o textadventure -Wall textadventure.cpp 
+ 1927  ./textadventure 
+ 1928  ./textadventure 
+ 1929  g++ -o textadventure -Wall textadventure.cpp 
+ 1930  g++ -o textadventure -Wall textadventure.cpp 
+ 1931  g++ -o textadventure -Wall textadventure.cpp 
+ 1932  g++ -o textadventure -Wall textadventure.cpp 
+ 1933  g++ -o textadventure -Wall textadventure.cpp 
+ 1934  g++ -o textadventure -Wall textadventure.cpp 
+ 1935  g++ -o textadventure -Wall textadventure.cpp 
+ 1936  ./textadventure 
+ 1937  ./textadventure 
+ 1938  ./textadventure 
+ 1939  g++ -o textadventure -Wall textadventure.cpp 
+ 1940  ./textadventure 
+ 1941  gedit textadventure.cpp 
+ 1942  exit
+ 1943  startx
+ 1944  sudo halt
+ 1945  exit
+ 1946  aoeu
+ 1947  exit
+ 1948  cd programs/
+ 1949  g++ -o textadventure -Wall textadventure.cpp 
+ 1950  g++ -o textadventure -Wall textadventure.cpp 
+ 1951  g++ -o textadventure -Wall textadventure.cpp 
+ 1952  g++ -o textadventure -Wall textadventure.cpp 
+ 1953  g++ -o textadventure -Wall textadventure.cpp 
+ 1954  g++ -o textadventure -Wall textadventure.cpp 
+ 1955  g++ -o textadventure -Wall textadventure.cpp 
+ 1956  g++ -o textadventure -Wall textadventure.cpp 
+ 1957  g++ -o textadventure -Wall textadventure.cpp 
+ 1958  g++ -o textadventure -Wall textadventure.cpp 
+ 1959  g++ -o textadventure -Wall textadventure.cpp 
+ 1960  g++ -o textadventure -Wall textadventure.cpp 
+ 1961  g++ -o textadventure -Wall textadventure.cpp 
+ 1962  g++ -o textadventure -Wall textadventure.cpp 
+ 1963  ./textadventure 
+ 1964  ./textadventure 
+ 1965  g++ -o textadventure -Wall textadventure.cpp 
+ 1966  g++ -o textadventure -Wall textadventure.cpp 
+ 1967  ./textadventure 
+ 1968  g++ -o textadventure -Wall textadventure.cpp 
+ 1969  ./textadventure 
+ 1970  g++ -o textadventure -Wall textadventure.cpp 
+ 1971  ./textadventure 
+ 1972  g++ -o textadventure -Wall textadventure.cpp 
+ 1973  ./textadventure 
+ 1974  g++ -o textadventure -Wall textadventure.cpp 
+ 1975  g++ -o textadventure -Wall textadventure.cpp 
+ 1976  g++ -o textadventure -Wall textadventure.cpp 
+ 1977  ./textadventure 
+ 1978  g++ -o textadventure -Wall textadventure.cpp 
+ 1979  ./textadventure 
+ 1980  exit
+ 1981  nm-applet 
+ 1982  nm-applet 
+ 1983  exit
+ 1984  tint2
+ 1985  sudo halt
+ 1986  startx
+ 1987  cd programs/
+ 1988  ls
+ 1989  ./knowing 
+ 1990  cp ~/BackUp/Portfolio/code/loremipsum.cpp 
+ 1991  cp ~/BackUp/Portfolio/code/loremipsum.cpp ~/programs/
+ 1992  ls
+ 1993  exit
+ 1994  cd programs/
+ 1995  mkdir loremipsum
+ 1996  cp loremipsum.cpp loremipsum/
+ 1997  cd loremipsum
+ 1998  ls
+ 1999  echo "# lorem-ipsum" >> README.md
+ 2000  git init
+ 2001  git add README.md 
+ 2002  git add loremipsum.cpp 
+ 2003  git remote add origin https://github.com/MColwell/lorem-ipsum.git
+ 2004  git commit -m "lorem ipsum"
+ 2005  git push -u origin master
+ 2006  exit
+ 2007  cd programs/
+ 2008  g++ -o lorem -Wall loremipsum.cpp 
+ 2009  g++ -o lorem -Wall loremipsum.cpp 
+ 2010  g++ -o lorem -Wall loremipsum.cpp 
+ 2011  ./lorem
+ 2012  ./lorem
+ 2013  g++ -o lorem -Wall loremipsum.cpp 
+ 2014  g++ -o lorem -Wall loremipsum.cpp 
+ 2015  g++ -o lorem -Wall loremipsum.cpp 
+ 2016  g++ -o lorem -Wall loremipsum.cpp 
+ 2017  g++ -o lorem -Wall loremipsum.cpp 
+ 2018  g++ -o lorem -Wall loremipsum.cpp 
+ 2019  g++ -o lorem -Wall loremipsum.cpp 
+ 2020  ./lorem
+ 2021  g++ -o lorem -Wall loremipsum.cpp 
+ 2022  ./lorem
+ 2023  ./lorem
+ 2024  g++ -o lorem -Wall loremipsum.cpp 
+ 2025  ./lorem
+ 2026  g++ -o lorem -Wall loremipsum.cpp 
+ 2027  ./lorem
+ 2028  xit
+ 2029  exit
+ 2030  nm-applet 
+ 2031  exit
+ 2032  tint2
+ 2033  sudo halt
+ 2034  startx
+ 2035  cat pings.sh 
+ 2036  cat pingresults.txt 
+ 2037  exit
+ 2038  nm-applet 
+ 2039  exit
+ 2040  tint2
+ 2041  exit
+ 2042  startx
+ 2043  sudo halt
+ 2044  nm-applet 
+ 2045  nm-applet 
+ 2046  exit
+ 2047  tint2
+ 2048  sudo halt
+ 2049  startx
+ 2050  nm-applet 
+ 2051  exit
+ 2052  tint2
+ 2053  exit
+ 2054  startx
+ 2055  sudo halt
+ 2056  sudo halt
+ 2057  startx
+ 2058  tint2
+ 2059  sudo halt
+ 2060  startx
+ 2061  nm-applet 
+ 2062  exit
+ 2063  tint2
+ 2064  sudo halt
+ 2065  startx
+ 2066  tint2
+ 2067  sudo halt
+ 2068  startx
+ 2069  nm-applet 
+ 2070  exit
+ 2071  tint2
+ 2072  sudo halt
+ 2073  startx
+ 2074  exit
+ 2075  aoeu
+ 2076  exit
+ 2077  nm-applet 
+ 2078  nm-applet 
+ 2079  exit
+ 2080  tint2
+ 2081  exit
+ 2082  startx
+ 2083  sudo halt
+ 2084  exit
+ 2085  exit
+ 2086  VirtualBox 
+ 2087  sudo ./dovms.sh 
+ 2088  VirtualBox 
+ 2089  exit
+ 2090  history | grep vbox
+ 2091  history > oldhistory.txt
+ 2092  exit
+ 2093  chromium
+ 2094  history | sudo
+ 2095  history | grep sudo
+ 2096  history | grep sudo r
+ 2097  exit
+ 2098  aeou
+ 2099  aoeu
+ 2100  aoeu
+ 2101  ssh cameron@luna
+ 2102  ssh cameron@luna
+ 2103  aoeu
+ 2104  ssh cameron@luna
+ 2105  exit
+ 2106  nm-applet 
+ 2107  nm-applet 
+ 2108  exit
+ 2109  tint2
+ 2110  exit
+ 2111  startx
+ 2112  sudo halt
+ 2113  nm-applet 
+ 2114  exit
+ 2115  tint2
+ 2116  sudo halt
+ 2117  startx
+ 2118  VirtualBox 
+ 2119  sudo ./dovms.sh 
+ 2120  VirtualBox 
+ 2121  exit
+ 2122  nm-applet 
+ 2123  exit
+ 2124  tint2
+ 2125  sudo haltl
+ 2126  sudo halt
+ 2127  startx
+ 2128  exit
+ 2129  python -m SimpleHTTPServer8000
+ 2130  python -m SimpleHTTPServer 8000
+ 2131  sudo emerge -a jq
+ 2132  exit
+ 2133  VirtualBox 
+ 2134  sudo ./dovms.sh 
+ 2135  VirtualBox 
+ 2136  exit
+ 2137  tint2
+ 2138  exit
+ 2139  startx
+ 2140  sudo halt
+ 2141  sudo ./dovms.sh 
+ 2142  VirtualBox 
+ 2143  sudo halt
+ 2144  startx
+ 2145  nm-applet 
+ 2146  exit
+ 2147  tint2
+ 2148  sudo halt
+ 2149  startx
+ 2150  sudo ./dovms.sh 
+ 2151  VirtualBox 
+ 2152  exit
+ 2153  nm-applet 
+ 2154  exit
+ 2155  tint2
+ 2156  sudo halt
+ 2157  startx
+ 2158  git remote add origin https://github.com/CSCI3308-4M/hexmech
+ 2159  mkdir teamproject
+ 2160  cd teamproject/
+ 2161  git init
+ 2162  git remote add origin https://github.com/CSCI3308-4M/hexmech
+ 2163  ls
+ 2164  git clone https://github.com/CSCI3308-4M/hexmech
+ 2165  ls
+ 2166  ls hexmech/
+ 2167  git status
+ 2168  git add hexmech/
+ 2169  git status
+ 2170  git rm --cached hexmech/README.md 
+ 2171  ls
+ 2172  git status
+ 2173  git add hexmech/
+ 2174  git clone https://github.com/CSCI3308-4M/hexmech
+ 2175  rm hexmech/README.md 
+ 2176  rmdir hexmech/
+ 2177  ls
+ 2178  ls hexmech/
+ 2179  rmdir hexmech/
+ 2180  rm hexmech/.*
+ 2181  rm hexmech/.git
+ 2182  ls
+ 2183  rmdir hexmech/
+ 2184  rmdir hexmech/.git/
+ 2185  rm hexmech/.git/*
+ 2186  git clone https://github.com/CSCI3308-4M/hexmech
+ 2187  mv hexmech/ hexmach/
+ 2188  git clone https://github.com/CSCI3308-4M/hexmech
+ 2189  ls
+ 2190  ls hexmech/
+ 2191  thunar
+ 2192  git status
+ 2193  git diff hexmech/README.md 
+ 2194  thunar
+ 2195  git init
+ 2196  git clone https://github.com/CSCI3308-4M/hexmech
+ 2197  git status
+ 2198  thunar
+ 2199  git clone https://github.com/CSCI3308-4M/hexmech
+ 2200  git status
+ 2201  cat hexmech/README.md 
+ 2202  exit
+ 2203  history | grep git
+ 2204  exit
+ 2205  nm-applet 
+ 2206  exit
+ 2207  tint2
+ 2208  sudo halt
+ 2209  startx
+ 2210  exit
+ 2211  exit
+ 2212  aoeu
+ 2213  aoeu
+ 2214  exit
+ 2215  xbacklight -set 10
+ 2216  exit
+ 2217  nm-applet 
+ 2218  nm-applet 
+ 2219  exit
+ 2220  tint2
+ 2221  sudo halt
+ 2222  startx
+ 2223  nm-applet 
+ 2224  exit
+ 2225  tint2
+ 2226  sudo halt
+ 2227  startx
+ 2228  nm-applet 
+ 2229  exit
+ 2230  tint2
+ 2231  sudo halt
+ 2232  startx
+ 2233  nm-applet 
+ 2234  exit
+ 2235  tint2
+ 2236  sudo halt
+ 2237  startx
+ 2238  cd .purple/logs/
+ 2239  ls
+ 2240  cd irc/
+ 2241  ls
+ 2242  cd pseudomonas\@irc.freenode.net/
+ 2243  ls
+ 2244  gedit \#salt.chat/
+ 2245  cd \#salt.chat/
+ 2246  ls
+ 2247  gedit 2016-02-10.172415-0700MST.html 
+ 2248  firefox 2016-02-10.172415-0700MST.html 
+ 2249  firefox 2016-02-03.223655-0700MST.html 
+ 2250  exit
+ 2251  nm-applet 
+ 2252  nm-applet 
+ 2253  exit
+ 2254  tint2
+ 2255  sudo halt
+ 2256  startx
+ 2257  nm-applet 
+ 2258  exit
+ 2259  tint2
+ 2260  sudo halt
+ 2261  startx
+ 2262  cd programs/compsys/
+ 2263  gcc -s pointlessarray.cpp 
+ 2264  ls
+ 2265  gedit a.out 
+ 2266  gcc -S pointlessarray.cpp 
+ 2267  ls
+ 2268  gedit pointlessarray.s
+ 2269  exit
+ 2270  startx
+ 2271  exit
+ 2272  exit
+ 2273  sudo ./dovms.sh 
+ 2274  VirtualBox 
+ 2275  sudo halt
+ 2276  startx
+ 2277  sudo halt
+ 2278  eog 00blank.png 
+ 2279  sudo nano .bashrc 
+ 2280  exit
+ 2281  norman
+ 2282  exit
+ 2283  sudo ./dovms
+ 2284  mv stuff/dovms.sh dovms.sh
+ 2285  sudo ./dovms
+ 2286  sudo ./dovms.sh 
+ 2287  VirtualBox 
+ 2288  exit
+ 2289  nm-applet 
+ 2290  nm-applet 
+ 2291  exit
+ 2292  tint2
+ 2293  sudo halt
+ 2294  startx
+ 2295  sudo ./dovms.sh 
+ 2296  VirtualBox 
+ 2297  exit
+ 2298  nm-applet 
+ 2299  tint2
+ 2300  startx
+ 2301  cat normannotes 
+ 2302  norman 
+ 2303  exit
+ 2304  nm-applet 
+ 2305  exit
+ 2306  tint2
+ 2307  exit
+ 2308  startx
+ 2309  sudo halt
+ 2310  cd /boot/
+ 2311  ls
+ 2312  exit
+ 2313  lsmod
+ 2314  lsmod | grep vga
+ 2315  nano dovms.sh 
+ 2316  modprobe vga
+ 2317  sudo modprobe vga
+ 2318  exit
+ 2319  nano .bashrc 
+ 2320  exit
+ 2321  man modprobe
+ 2322  sudo emerge -a lxrander
+ 2323  sudo emerge -a lxrandr
+ 2324  lxrandr 
+ 2325  nano norman
+ 2326  history | grep +x
+ 2327  chmod +x norman
+ 2328  ./norman 
+ 2329  ./norman 
+ 2330  exit
+ 2331  tint2
+ 2332  sudo halt
+ 2333  startx
+ 2334  eog 00blank.png 
+ 2335  sudo halt
+ 2336  startx
+ 2337  tint2
+ 2338  exit
+ 2339  nm-applet 
+ 2340  sudo halt
+ 2341  startx
+ 2342  gnome-screenshot --delay 1
+ 2343  exit
+ 2344  nm-applet 
+ 2345  exit
+ 2346  tint2
+ 2347  sudo halt
+ 2348  startx
+ 2349  thunar
+ 2350  exit
+ 2351  nm-applet 
+ 2352  nm-applet 
+ 2353  exit
+ 2354  tint2
+ 2355  sudo halt
+ 2356  startx
+ 2357  sudo ./dovms.sh 
+ 2358  VirtualBox 
+ 2359  exit
+ 2360  nm-applet 
+ 2361  exit
+ 2362  tint2
+ 2363  sudo halt
+ 2364  startx
+ 2365  sudo ./dovms.sh 
+ 2366  VirtualBox 
+ 2367  exit
+ 2368  nm-applet 
+ 2369  exit
+ 2370  tint2
+ 2371  exit
+ 2372  startx
+ 2373  sudo halt
+ 2374  sudo ./dovms.sh 
+ 2375  VirtualBox 
+ 2376  exit
+ 2377  startx
+ 2378  sudo halt
+ 2379  nm-applet 
+ 2380  exit
+ 2381  tint2
+ 2382  sudo halt
+ 2383  startx
+ 2384  history | grep ping
+ 2385  ping -c 100 8.8.8.8
+ 2386  ping 8.8.8.8
+ 2387  ping moodle.cs.colorado.edu
+ 2388  ping cs2400.cs.colorado.edu:20161/scoreboard
+ 2389  ping cs2400.cs.colorado.edu:20161/scoreboard
+ 2390  exit
+ 2391  sudo ./dovms.sh 
+ 2392  VirtualBox 
+ 2393  exit
+ 2394  nm-applet 
+ 2395  nm-applet 
+ 2396  exit
+ 2397  tint2
+ 2398  exit
+ 2399  startx
+ 2400  sudo halt
+ 2401  sudo ./dovms.sh 
+ 2402  VirtualBox 
+ 2403  exit
+ 2404  nm-applet 
+ 2405  nm-applet 
+ 2406  exit
+ 2407  tint2
+ 2408  sudo halt
+ 2409  startx
+ 2410  sudo emerge -a postgres
+ 2411  sudo emerge -a postgresql
+ 2412  exit
+ 2413  sudo ./dovms.sh 
+ 2414  VirtualBox 
+ 2415  exit
+ 2416  nm-applet 
+ 2417  exit
+ 2418  tint2
+ 2419  sudo halt
+ 2420  startx
+ 2421  sudo emerge -a ntp-client
+ 2422  sudo emerge -a ntpclient
+ 2423  exit
+ 2424  n
+ 2425  ntpclient 
+ 2426  man ntpclient
+ 2427  exit
+ 2428  exit
+ 2429  sudo ./dovms.sh 
+ 2430  VirtualBox 
+ 2431  exit
+ 2432  nm-applet 
+ 2433  exit
+ 2434  tint2
+ 2435  exit
+ 2436  startx
+ 2437  sudo halt
+ 2438  tint2
+ 2439  exit
+ 2440  sudo ./dovms.sh 
+ 2441  VirtualBox 
+ 2442  sudo halt
+ 2443  startx
+ 2444  nm-applet 
+ 2445  exit
+ 2446  tint2
+ 2447  sudo halt
+ 2448  startx
+ 2449  sudo emerge -a pdflatex
+ 2450  sudo emerge -a texlive
+ 2451  pdftex compsysnotes.tex 
+ 2452  ls
+ 2453  rm compsysnotes.log 
+ 2454  pdftex compsysnotes.tex 
+ 2455  rm compsysnotes.log 
+ 2456  pdflatex compsysnotes.tex 
+ 2457  ls
+ 2458  evince compsysnotes.pdf 
+ 2459  pdflatex compsysnotes.tex 
+ 2460  pdflatex compsysnotes.tex 
+ 2461  pdflatex compsysnotes.tex 
+ 2462  evince compsysnotes.pdf 
+ 2463  pdflatex compsysnotes.tex 
+ 2464  evince compsysnotes.pdf 
+ 2465  pdflatex compsysnotes.tex 
+ 2466  sudo emerge -a wsuipa
+ 2467  evince compsysnotes.pdf 
+ 2468  pdflatex compsysnotes.tex 
+ 2469  pdflatex compsysnotes.tex 
+ 2470  pdflatex compsysnotes.tex 
+ 2471  evince compsysnotes.pdf 
+ 2472  pdflatex compsysnotes.tex 
+ 2473  evince compsysnotes.pdf 
+ 2474  exit
+ 2475  exit
+ 2476  nm-applet 
+ 2477  exit
+ 2478  tint2
+ 2479  exit
+ 2480  startx
+ 2481  sudo halt
+ 2482  xbacklight -set 70
+ 2483  exit
+ 2484  evince compsysnotes.pdf 
+ 2485  pdflatex compsysnotes.tex 
+ 2486  evince compsysnotes.pdf 
+ 2487  exit
+ 2488  nm-applet 
+ 2489  exit
+ 2490  ping 8.8.8.8
+ 2491  cabbage 
+ 2492  exit
+ 2493  tint2
+ 2494  sudo ./dovms.sh 
+ 2495  VirtualBox 
+ 2496  exit
+ 2497  nm-applet 
+ 2498  exit
+ 2499  tint2
+ 2500  sudo halt
+ 2501  startx
+ 2502  sudo ./dovms.sh 
+ 2503  VirtualBox 
+ 2504  sudo halt
+ 2505  startx
+ 2506  exit
+ 2507  nm-applet 
+ 2508  nm-applet 
+ 2509  exit
+ 2510  tint2
+ 2511  sudo halt
+ 2512  startx
+ 2513  pdflatex 
+ 2514  pdflatex compsysnotes.tex 
+ 2515  evince compsysnotes.pdf 
+ 2516  pdflatex compsysnotes.tex 
+ 2517  evince compsysnotes.pdf 
+ 2518  exit
+ 2519  sudo nano /etc/portage/
+ 2520  sudo nano /etc/portage/package.use 
+ 2521  exit
+ 2522  sudo nano /etc/portage/package.use 
+ 2523  exit
+ 2524  sudo nano /etc/portage/package.use 
+ 2525  exit
+ 2526  sudo emerge -a ls
+ 2527  exit
+ 2528  history | grep sync
+ 2529  sudo eix-sync
+ 2530  sudo emerge node.js
+ 2531  sudo emerge nodejs npm
+ 2532  sudo emerge nodejs
+ 2533  sudo emerge -avuDN world
+ 2534  sudo emerge -avuDN world
+ 2535  sudo emerge -avuDN world
+ 2536  exit
+ 2537  exit
+ 2538  nm-applet 
+ 2539  exit
+ 2540  tint2
+ 2541  sudo halt
+ 2542  startx
+ 2543  ping 8.8.8.8
+ 2544  cabbage 
+ 2545  exit
+ 2546  pdflatex compsysnotes.tex 
+ 2547  evince compsysnotes.
+ 2548  evince compsysnotes.pdf 
+ 2549  pdflatex compsysnotes.tex 
+ 2550  exit
+ 2551  exit
+ 2552  nm-applet 
+ 2553  exit
+ 2554  tint2
+ 2555  exit
+ 2556  startx
+ 2557  sudo halt
+ 2558  touch index.html
+ 2559  gedit index.html 
+ 2560  exit
+ 2561  npm install http-server -g
+ 2562  sudo npm install http-server -g
+ 2563  mkdir hexmecher
+ 2564  cd hexmecher/
+ 2565  cd ..
+ 2566  rmdir hexmecher/
+ 2567  node bin/http-server
+ 2568  node /bin/http-server
+ 2569  sudo npm install http-server -g
+ 2570  http-server index.html 
+ 2571  exit
+ 2572  nm-applet 
+ 2573  exit
+ 2574  tint2
+ 2575  exit
+ 2576  startx
+ 2577  sudo halt
+ 2578  nm-applet 
+ 2579  exit
+ 2580  tint2
+ 2581  sudo halt
+ 2582  startx
+ 2583  cd Downloads/
+ 2584  ls
+ 2585  ls | grep pdf
+ 2586  cd ..
+ 2587  ls
+ 2588  cd Desktop/
+ 2589  ls
+ 2590  cd ..
+ 2591  cd stuff/
+ 2592  ls | grep pdf
+ 2593  thunar
+ 2594  exit
+ 2595  nm-applet 
+ 2596  nm-applet 
+ 2597  exit
+ 2598  tint2
+ 2599  exit
+ 2600  startx
+ 2601  sudo halt
+ 2602  nm-applet 
+ 2603  exit
+ 2604  tint2
+ 2605  sudo halt
+ 2606  startx
+ 2607  nm-applet 
+ 2608  exit
+ 2609  tint2
+ 2610  sudo halt
+ 2611  startx
+ 2612  sudo halt
+ 2613  startx
+ 2614  nm-applet 
+ 2615  exit
+ 2616  tint2 
+ 2617  sudo halt
+ 2618  startx
+ 2619  cd app/
+ 2620  ls
+ 2621  mkdir images
+ 2622  exit
+ 2623  ping 8.8.8.8
+ 2624  exit
+ 2625  cd teamproject/hexmech/
+ 2626  git pull
+ 2627  git checkout -b images
+ 2628  cp ~/Downloads/favicon.png app/images/
+ 2629  clear
+ 2630  cp ~/Downloads/lightwoods.png app/images/
+ 2631  ls app/images/
+ 2632  cp ~/Downloads/water.png app/images/
+ 2633  cp ~/Downloads/.png app/images/
+ 2634  git push origin branch
+ 2635  git add .
+ 2636  git commit -m "Some preliminary images"
+ 2637  git push origin images
+ 2638  exit
+ 2639  nm-applet 
+ 2640  exit
+ 2641  tint2
+ 2642  sudo halt
+ 2643  startx
+ 2644  sudo emerge -a scudcloud
+ 2645  exit
+ 2646  sudo nano /etc/portage/package.use 
+ 2647  sudo nano /etc/portage/package.use 
+ 2648  exit
+ 2649  sudo emerge -a python3
+ 2650  sudo emerge -a python
+ 2651  sudo emerge -a python-qt4
+ 2652  sudo emerge -a python-dbus
+ 2653  sudo emerge -a qt4
+ 2654  ls | grep clou
+ 2655  cd scudcloud-1.18/
+ 2656  sudo python3 setup.py install
+ 2657  sudo emerge -a python3-setuptools
+ 2658  sudo emerge -a dev-python/setuptools
+ 2659  sudo emerge -a dev-python/qt4
+ 2660  sudo emerge -a dev-python/PyQt4
+ 2661  sudo emerge -a dev-python/PyQt4
+ 2662  sudo emerge -a dev-python/PyQt4
+ 2663  sudo emerge -a pychat
+ 2664  exit
+ 2665  chromium
+ 2666  exit
+ 2667  exit
+ 2668  ls -al ~/.ssh/
+ 2669  ssh-keygen -t rsa -b 4096 -C "maco8719@colorado.edu"
+ 2670  ls -al ~/.ssh/
+ 2671  cat .ssh/id_rsa
+ 2672  cat .ssh/id_rsa.pub 
+ 2673  exit
+ 2674  cd teamproject/hexmech/
+ 2675  ls
+ 2676  cd ..
+ 2677  cd ..
+ 2678  mkdir hexmech
+ 2679  cd hexmech/
+ 2680  cd ..
+ 2681  git clone https://github.com/CSCI3308-4M/hexmech
+ 2682  ls
+ 2683  cd hexmech/
+ 2684  ls
+ 2685  cd app/
+ 2686  ls
+ 2687  cd views/
+ 2688  ls
+ 2689  cat index.jade 
+ 2690  cat layout.jade 
+ 2691  cat error.jade 
+ 2692  cd ..
+ 2693  ls
+ 2694  cd views/
+ 2695  ls
+ 2696  cd ..
+ 2697  ls
+ 2698  git checkout -b images
+ 2699  ls
+ 2700  mkdir images
+ 2701  cp ~/Downloads/favicon.png images/
+ 2702  npm install serve-favicon --save
+ 2703  cd public/
+ 2704  ls
+ 2705  cd stylesheets/
+ 2706  ls
+ 2707  cd ..
+ 2708  ls
+ 2709  mkdir images
+ 2710  mv ~/hexmech/app/images/favicon.png images/
+ 2711  rmdir ~/hexmech/app/images/
+ 2712  cd ..
+ 2713  cd views/
+ 2714  ls
+ 2715  cat * | grep ico
+ 2716  cd ..
+ 2717  ls
+ 2718  cd public/stylesheets/
+ 2719  ls
+ 2720  cat * | grep ico
+ 2721  cd ..
+ 2722  cd ..
+ 2723  cd routes/
+ 2724  ls
+ 2725  cat * | grep ico
+ 2726  cd .. 
+ 2727  cat app.js | grep ico
+ 2728  nano app.js 
+ 2729  nano app.js 
+ 2730  git add .
+ 2731  git commit -m "Favicon now works"
+ 2732  git push origin images
+ 2733  git pull images
+ 2734  git pull
+ 2735  git pull origin images
+ 2736  rm images/favicon.png 
+ 2737  mv images/* ~/hexmech/app/public/images/
+ 2738  rmdir images/
+ 2739  git push origin images
+ 2740  gedit
+ 2741  gedit package.json 
+ 2742  git add .
+ 2743  cd ..
+ 2744  git add .
+ 2745  git commit -m "fixed tab problem"
+ 2746  git push origin images
+ 2747  exit
+ 2748  cd 
+ 2749  exit
+ 2750  which npm
+ 2751  cd app/
+ 2752  npm install
+ 2753  npm start
+ 2754  npm start
+ 2755  npm start
+ 2756  npm start
+ 2757  exit
+ 2758  ssh 45.33.12.54
+ 2759  man copyid
+ 2760  man copy-id
+ 2761  ssh 45.33.12.54
+ 2762  ssh-copy-id 45.33.12.54
+ 2763  ssh 45.33.12.54
+ 2764  ssh 45.33.12.54
+ 2765  history > meetinghistory
+ 2766  history > meetinghistory
+ 2767  ssh 45.33.12.54
+ 2768  exit
+ 2769  sudo emerge -a elinks
+ 2770  elinks www.google.com
+ 2771  clear
+ 2772  firefox 
+ 2773  exit
+ 2774  npm install plaidchat -g
+ 2775  sudo npm install plaidchat -g
+ 2776  plaidchat
+ 2777  exit
+ 2778  nm-applet 
+ 2779  exit
+ 2780  tint2
+ 2781  exit
+ 2782  startx
+ 2783  sudo halt
+ 2784  nm-applet 
+ 2785  nm-applet 
+ 2786  exit
+ 2787  tint2
+ 2788  exit
+ 2789  startx
+ 2790  sudo halt
+ 2791  gnome-screenshot --delay 8
+ 2792  exit
+ 2793  sudo thunar
+ 2794  ssh mack@inara.cchildress.org
+ 2795  history | grep tar
+ 2796  cat stuff/history | grep tar
+ 2797  tar -xf pictures.tar -C skip/
+ 2798  tar -xf pictures.tar -C skip/*
+ 2799  tar -c pictures.tar skip/*
+ 2800  exit
+ 2801  sudo umount /media/card/
+ 2802  thunar
+ 2803  sudo umount /media/card/
+ 2804  tar cvJf skip.tar.xz -C skip
+ 2805  tar cvJf skip.tar.xz -C ~/skip
+ 2806  sudo umount /media/card/
+ 2807  lsof
+ 2808  lsof(8)
+ 2809  sudo lsof
+ 2810  fuser
+ 2811  fuser /media/card/
+ 2812  fuser -m
+ 2813  fuser -m /dev/mmcblk0p1 
+ 2814  tar cvJf skip.tar.xz -C ~/skip/
+ 2815  tar cvJf skip.tar.xz -C ~/skip/
+ 2816  sudo umount /media/card/
+ 2817  exit
+ 2818  exit
+ 2819  nm-applet 
+ 2820  nm-applet 
+ 2821  exit
+ 2822  tint2
+ 2823  exit
+ 2824  man scp
+ 2825  scp -r skip/ inara.cchildress.org
+ 2826  sudo mount /dev/mmcblk0p1 /media/card/
+ 2827  cd /media/card/
+ 2828  ls
+ 2829  mkdir skip
+ 2830  sudo mkdir skip
+ 2831  sudo cp ~/skip/* skip/
+ 2832  ls
+ 2833  ls skip/
+ 2834  startx
+ 2835  sudo halt
+ 2836  nm-applet 
+ 2837  nm-applet 
+ 2838  exit
+ 2839  tint2
+ 2840  sudo halt
+ 2841  startx
+ 2842  ifconfig 
+ 2843  exit
+ 2844  xbacklight -set 0
+ 2845  exit
+ 2846  history | grep p
+ 2847  plaidchat 
+ 2848  exit
+ 2849  mkdir photos
+ 2850  mv skip.tar.xz photos/
+ 2851  cd photos/
+ 2852  ls
+ 2853  python2 -m SimpleHTTPServer
+ 2854  exit
+ 2855  cd hexmech/
+ 2856  ls
+ 2857  ls app/public/
+ 2858  which phase
+ 2859  which phaser
+ 2860  sudo npm install jsdomnpm install node-canvas
+ 2861  ls
+ 2862  ls app/
+ 2863  ls app/views/
+ 2864  gedit app/views/index.jade 
+ 2865  gedit app/views/index.jade 
+ 2866  exit
+ 2867  nm-applet 
+ 2868  nm-applet 
+ 2869  exit
+ 2870  tint2
+ 2871  sudo mount /dev/sdb1 /media/external/
+ 2872  thunar
+ 2873  sudo umount /media/external/
+ 2874  sudo halt
+ 2875  startx
+ 2876  ping 24.197.149.12
+ 2877  traceroute 24.197.149.12
+ 2878  sudo emerge -a traceroute
+ 2879  traceroute 24.197.149.12
+ 2880  exit
+ 2881  nm-applet 
+ 2882  nm-applet 
+ 2883  exit
+ 2884  tint2
+ 2885  exit
+ 2886  startx
+ 2887  sudo halt
+ 2888  nm-applet 
+ 2889  exit
+ 2890  tint2
+ 2891  exit
+ 2892  startx
+ 2893  sudo halt
+ 2894  ls -2
+ 2895  ls -1
+ 2896  ls
+ 2897  exit
+ 2898  nm-applet 
+ 2899  exit
+ 2900  tint2
+ 2901  sudo halt
+ 2902  startx
+ 2903  firefox
+ 2904  sudo halt
+ 2905  startx
+ 2906  nm-applet 
+ 2907  nm-applet 
+ 2908  exit
+ 2909  tint2
+ 2910  sudo halt
+ 2911  startx
+ 2912  nm-applet 
+ 2913  exit
+ 2914  tint2
+ 2915  sudo halt
+ 2916  startx
+ 2917  nm-applet 
+ 2918  exit
+ 2919  tint2
+ 2920  sudo halt
+ 2921  startx
+ 2922  startx
+ 2923  exit
+ 2924  sudo halt
+ 2925  startx
+ 2926  tint2
+ 2927  sudo halt
+ 2928  startx
+ 2929  cabbage 
+ 2930  exit
+ 2931  nm-applet 
+ 2932  nm-applet 
+ 2933  nm-applet 
+ 2934  exit
+ 2935  tint2
+ 2936  exit
+ 2937  startx
+ 2938  sudo halt
+ 2939  cd ..
+ 2940  ls
+ 2941  ls public/
+ 2942  mkdir public/spritesheets
+ 2943  cd public/spritesheets/
+ 2944  ls
+ 2945  history | grep npm
+ 2946  history | grep node
+ 2947  history | grep http
+ 2948  http-server index.html
+ 2949  cd ..
+ 2950  ls
+ 2951  cd ..
+ 2952  cd views/
+ 2953  ls
+ 2954  http-server index.html
+ 2955  cd ..
+ 2956  cd ..
+ 2957  http-server index.html
+ 2958  http-server app.js
+ 2959  http-server app.js
+ 2960  http-server app.js
+ 2961  ls
+ 2962  gedit README.md 
+ 2963  ext
+ 2964  exit
+ 2965  gedit ~/stuff/newcourseplan 
+ 2966  ls
+ 2967  cd app/
+ 2968  ls
+ 2969  touch game.js
+ 2970  gedit game.js 
+ 2971  exit
+ 2972  cd hexmech/
+ 2973  ls
+ 2974  history | grep git
+ 2975  git checkout -b master
+ 2976  git pull origin master
+ 2977  ls
+ 2978  cd app/
+ 2979  ls
+ 2980  cd views/
+ 2981  ls
+ 2982  gedit index.jade 
+ 2983  cd ..
+ 2984  exit
+ 2985  cp rule.png hexmech/app/public/spritesheets/
+ 2986  cp new_game.png hexmech/app/public/spritesheets/
+ 2987  cp sign_out.png hexmech/app/public/spritesheets/
+ 2988  cp background_mainpage.png hexmech/app/public/images/
+ 2989  exit
+ 2990  nm-applet 
+ 2991  exit
+ 2992  tint2
+ 2993  exit
+ 2994  startx
+ 2995  sudo halt
+ 2996  nm-applet 
+ 2997  exit
+ 2998  tint2
+ 2999  sudo halt
+ 3000  startx
+ 3001  history http
+ 3002  history | grep http
+ 3003  history | grep 21..
+ 3004  history | grep 22..
+ 3005  history > newhistoryfile

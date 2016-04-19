@@ -13,7 +13,9 @@ router.get('/', function(req, res, next) {
     repository: package.repository.url,
     contributors: package.contributors,
     signupLink: 'signup',
-    loginLink: 'login'
+    loginLink: 'login',
+    gameLink: 'game',
+    game2Link: 'game2'
   };
 
   res.format({
