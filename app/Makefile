@@ -35,3 +35,4 @@ javascripts:
 clean:
 	rm -rf node_modules
 	$(MAKE) -C public/javascripts clean
+	$(MAKE) -C public/stylesheets clean
