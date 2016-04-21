@@ -1,0 +1,23 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-image: url("background_tileablemetal.png");
+  background-repeat: repeat;
+}
+
+a {
+  color: #00B7FF;
+}
+
+.center {
+  text-align: center;
+}
+
+.wide {
+  width: 100%;
+}
+
+.login.well {
+  margin: 0 auto;
+  max-width: 350px;
+}
