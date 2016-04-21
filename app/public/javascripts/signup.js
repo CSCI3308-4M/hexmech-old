@@ -61,7 +61,7 @@ $(document).ready(() => {
   // password validation
   $('#password').rules('add', {
     required: true,
-    minlength: 14,
+    minlength: 6,
     maxlength: 160,
   });
 
