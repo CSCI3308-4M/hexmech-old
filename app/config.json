@@ -2,5 +2,7 @@
   "port": 8080,
   "bcryptStrength": 14,
   "jwtSecret": "key",
+  "jwtAlgorithm": "HS256",
+  "jwtExpireTime": 1200,
   "mongoURI": "mongodb://hexmech:password@localhost:27017/hexmech"
 }

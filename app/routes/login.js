@@ -3,6 +3,8 @@ const express = require('express');
 const _ = require('underscore');
 const httpError = require('http-error');
 const packageConfig = require('packageConfig');
+const config = require('config');
+const jwt = require('jsonwebtoken');
 const User = require('../models/user.js');
 
 
@@ -43,6 +45,22 @@ function flashError(err, req, res) {
 }
 
 
+function generateJWT(req, res, next, user) {
+  const options = {
+    algorithm: config.jwtAlgorithm,
+    expiresIn: config.jwtExpireTime,
+  };
+  const payload = user._doc
+  delete payload.__v
+  delete payload._id
+  delete payload.password
+  jwt.sign(payload, config.jwtSecret, options, (token) => {
+    console.log(token);
+    next();
+  });
+}
+
+
 // login user
 function login(req, res, next) {
   User.findOne({ username: req.body.username }, (err, user) => {
@@ -61,7 +79,7 @@ function login(req, res, next) {
         flashError([{ msg: 'Incorrect password.' }], req, res);
         return;
       }
-      next();
+      generateJWT(req, res, next, user);
     });
   });
 }
