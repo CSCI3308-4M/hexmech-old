@@ -1,7 +1,6 @@
 'use strict';
 
 module.exports = (req, res, next) => {
-  console.log('in fill');
   if (req.user) {
     res.locals.navbar = [
       {text: 'Hello ' + req.user.displayName, href: ''},
