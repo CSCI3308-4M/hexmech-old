@@ -1,6 +1,5 @@
 'use strict';
 const express = require('express');
-const httpError = require('http-error');
 const config = require('config');
 
 const router = new express.Router();
@@ -11,14 +10,14 @@ const router = new express.Router();
 
 
 // GET login page
-router.get('/', (req, res, next) => {
+router.get('/', (req, res) => {
   res.clearCookie(config.jwtCookieName);
   res.redirect('/');
 });
 
 
 // POST login page
-router.post('/', (req, res, next) => {
+router.post('/', (req, res) => {
   res.clearCookie(config.jwtCookieName);
   res.redirect('/');
 });

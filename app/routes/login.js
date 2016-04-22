@@ -51,14 +51,14 @@ function generateJWT(req, res, next, user) {
     algorithm: config.jwtAlgorithm,
     expiresIn: config.jwtExpireTime,
   };
-  const payload = user._doc
-  delete payload.__v
-  delete payload._id
-  delete payload.password
+  const payload = user._doc;
+  delete payload.__v;
+  delete payload._id;
+  delete payload.password;
   jwt.sign(payload, config.jwtSecret, options, (token) => {
     const time = new Date();
-    const expire = new Date(time.getTime() + 1000*config.jwtExpireTime);
-    res.cookie(config.jwtCookieName, token, {expire: expire});
+    const expire = new Date(time.getTime() + (1000 * config.jwtExpireTime));
+    res.cookie(config.jwtCookieName, token, { expire });
     next();
   });
 }

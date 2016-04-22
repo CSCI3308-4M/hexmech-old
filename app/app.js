@@ -39,23 +39,21 @@ app.use(jwt({
     const token = req.cookies[config.jwtCookieName];
     if (token) {
       return token;
-    } else {
-      return null;
     }
+    return null;
   },
 }));
 app.use((err, req, res, next) => {
   if (err.name === 'UnauthorizedError') {
-    req.user = null;
     if (err.inner.name === 'TokenExpiredError') {
       res.clearCookie(config.jwtCookieName);
     }
   }
   next();
 });
-app.use(function(req, res, next) {
-    res.locals.user = req.user;
-    next();
+app.use((req, res, next) => {
+  res.locals.user = req.user;
+  next();
 });
 
 app.use(navbar);
