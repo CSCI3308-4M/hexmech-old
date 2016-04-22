@@ -12,7 +12,7 @@ block content
       h2 Sign Up
       hr
     include messages
-    form(id="loginForm", name="signup", action=signupLink, method="post")
+    form(id="loginForm", name="signup", action=signupURL, method="post")
       .form-group
         label(for="displayName") Display Name
         input(
@@ -72,4 +72,4 @@ block content
     p.
       Your password will be hashed with
       #[a(href="https://www.npmjs.com/package/bcrypt") bcrypt].
-    p Already have an account: #[a(href= loginLink) Login]
+    p Already have an account: #[a(href= loginURL) Login]

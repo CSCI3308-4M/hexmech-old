@@ -1,11 +1,11 @@
+BOOTSTRAP_THEME=cyborg
+
 .PHONY: all
-all: bootstrap.min.css bootstrap.min.css.map
+all: bootstrap.min.css
 
-bootstrap.min.css: ../../node_modules/bootstrap/dist/css/bootstrap.min.css
-	cp $< $@
-
-bootstrap.min.css.map: ../../node_modules/bootstrap/dist/css/bootstrap.min.css.map
-	cp $< $@
+.PHONY: bootstrap.min.css
+bootstrap.min.css:
+	curl -O https://bootswatch.com/$(BOOTSTRAP_THEME)/bootstrap.min.css
 
 clean:
 	rm *.min.css*
