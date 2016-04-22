@@ -1,0 +1,10 @@
+nav.navbar.navbar-inverse
+  .container-fluid
+    .navbar-header
+      a.navbar-brand(href="/")= title
+    .collapse.navbar-collapse
+      ul.nav.navbar-nav
+        each item in navbar
+          li
+            a(href= item.href)= item.text
+div.page-header

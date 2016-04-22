@@ -45,6 +45,7 @@ function flashError(err, req, res) {
 }
 
 
+// generate JWT and store in cookie
 function generateJWT(req, res, next, user) {
   const options = {
     algorithm: config.jwtAlgorithm,
@@ -55,7 +56,9 @@ function generateJWT(req, res, next, user) {
   delete payload._id
   delete payload.password
   jwt.sign(payload, config.jwtSecret, options, (token) => {
-    console.log(token);
+    const time = new Date();
+    const expire = new Date(time.getTime() + 1000*config.jwtExpireTime);
+    res.cookie(config.jwtCookieName, token, {expire: expire});
     next();
   });
 }

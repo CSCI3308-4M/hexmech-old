@@ -4,5 +4,6 @@
   "jwtSecret": "key",
   "jwtAlgorithm": "HS256",
   "jwtExpireTime": 1200,
+  "jwtCookieName": "hexmechJWT",
   "mongoURI": "mongodb://hexmech:password@localhost:27017/hexmech"
 }
