@@ -75,8 +75,8 @@ function validate(req) {
     },
     password: {
       isLength: {
-        options: [{ min: 14, max: 160 }],
-        errorMessage: 'Password must be between 14 and 160 characters.',
+        options: [{ min: 6, max: 160 }],
+        errorMessage: 'Password must be between 6 and 160 characters.',
       },
       notEmpty: {
         errorMessage: 'Password is required.',

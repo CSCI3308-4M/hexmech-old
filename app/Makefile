@@ -1,7 +1,7 @@
 ESLINT = ./node_modules/.bin/eslint
 
 .PHONY: all
-all: install javascripts
+all: install javascripts stylesheets
 
 .PHONY: prepublish
 prebublish: javascripts stylesheets lint
@@ -35,3 +35,4 @@ javascripts:
 clean:
 	rm -rf node_modules
 	$(MAKE) -C public/javascripts clean
+	$(MAKE) -C public/stylesheets clean
