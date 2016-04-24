@@ -7,7 +7,10 @@ const favicon = require('serve-favicon');
 const logger = require('morgan');
 const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
+const jwt = require('express-jwt');
+const navbar = require('navbar');
 const expressValidator = require('express-validator');
+const config = require('config');
 
 const routes = require('./routes/index');
 const users = require('./routes/users');
@@ -29,9 +32,36 @@ app.use(expressValidator(require('express-validators')));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+// setup JWT authentication
+app.use(jwt({
+  secret: config.jwtSecret,
+  getToken: (req) => {
+    const token = req.cookies[config.jwtCookieName];
+    if (token) {
+      return token;
+    }
+    return null;
+  },
+}));
+app.use((err, req, res, next) => {
+  if (err.name === 'UnauthorizedError') {
+    if (err.inner.name === 'TokenExpiredError') {
+      res.clearCookie(config.jwtCookieName);
+    }
+  }
+  next();
+});
+app.use((req, res, next) => {
+  res.locals.user = req.user;
+  next();
+});
+
+app.use(navbar);
 app.use('/', routes);
 app.use('/users', users);
 app.use('/signup', require('./routes/signup'));
+app.use('/login', require('./routes/login'));
+app.use('/logout', require('./routes/logout'));
 app.use(express.static('public'));
 
 // catch 404 and forward to error handler
